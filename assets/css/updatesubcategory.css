@@ -1,0 +1,40 @@
+.sma-r-bot {
+    padding: 24px 34px;
+  }
+  .sma-r-bot form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sma-rb-item {
+    width: 266px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  .sma-rb-item input {
+    border-radius: 8px;
+    border: 1px solid var(--dGrey-01);
+    height: 38px;
+    padding-left: 10px;
+  }
+  .sma-rb-item:nth-child(3) {
+    margin-right: 0;
+  }
+  .sma-rb-item:nth-child(4) {
+     width: 100%;
+  }
+  .sma-rb-item:nth-child(4) label {
+    width: fit-content;
+    height: fit-content;
+  }
+  .sma-rb-item:nth-child(4) textarea {
+    width: 840px;
+  }
+  .sma-rb-item label {
+    margin-bottom: 8px;
+  }
+  .sma-r-end {
+    margin-top: 16px;
+  }
+  

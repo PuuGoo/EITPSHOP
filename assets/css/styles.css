@@ -1,0 +1,346 @@
+/* Main Banner  */
+.main-banner {
+  background: var(--dGrey-03);
+  position: relative;
+}
+.mb-text {
+  padding: 100px 606px 192px 0;
+  position: relative;
+  z-index: 1;
+}
+.mb-text-content {
+  margin-bottom: 32px;
+}
+.mb-text-content div {
+  margin-bottom: 16px;
+}
+.mb-text-content div:last-child {
+  margin-bottom: 0 !important;
+}
+.mb-text-content .mb-content {
+  color: var(--grey-01) !important;
+}
+
+.main-banner-img {
+  position: absolute;
+  width: 827px;
+  height: 620px;
+  top: 0;
+  left: 613px;
+  z-index: 0;
+}
+.mb-btn-right {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  top: 284px;
+  right: 120px;
+  background: var(--white);
+  border-radius: 50%;
+  z-index: 3;
+}
+.product-cart {
+  max-width: 150px;
+  max-height: 224px;
+  border-radius: 8px;
+  background: var(--white);
+  position: absolute;
+  top: 197px;
+  right: 403px;
+}
+.pc-image {
+  background: var(--lGrey-01);
+  width: 150px;
+  height: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.pc-image img {
+  width: 120px;
+  height: 120px;
+}
+.pc-text {
+  padding: 10px 27px 10px 10px;
+}
+.pc-text .pc-title {
+  color: var(--black-01);
+}
+.pc-text .pc-content {
+  color: var(--grey-01);
+}
+.pc-text .pc-review {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+.pc-review svg {
+  margin-right: 4px;
+}
+.pc-review span {
+  color: var(--black-01);
+  margin-right: 11px;
+}
+.pc-review .stock {
+  color: var(--black-01);
+}
+.btn-heart {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.divider-dot {
+  position: absolute;
+  top: 171px;
+  right: 477px;
+}
+.divider-dot .dd {
+  width: 2px;
+  height: 4px;
+  border-radius: 20px;
+  background: var(--white);
+  margin-bottom: 2px;
+}
+.mb-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--white);
+  opacity: 0.25;
+  position: absolute;
+  top: 125px;
+  right: 457px;
+}
+.circle-child {
+  width: 16px;
+  height: 16px;
+  background: var(--white);
+  border-radius: 50%;
+  position: absolute;
+  top: 138px;
+  right: 470px;
+}
+/* Featured Categories */
+.fea-categories {
+  padding-top: 80px;
+}
+.site-fea-cat .sf-cat-title {
+  /* margin-bottom: 52px; */
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.site-fea-cat .sf-cat-title .sfc-title {
+  color: var(--black-01);
+}
+.site-fea-cat .sf-cat-title .sfc-view {
+  border-radius: 8px;
+  border: 1px solid var(--darkGreen-01);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 134px;
+  height: 45px;
+
+  color: var(--darkGreen-01);
+}
+.sf-cat-cards {
+  display: flex;
+  padding: 52px 0;
+}
+.sf-cat-card {
+  width: 180px;
+  height: 198px;
+  border-radius: 12px;
+  border: 2px solid var(--dGrey-01);
+  margin-right: 24px;
+  box-sizing: border-box;
+}
+.sf-cat-card:last-child {
+  margin-right: 0;
+}
+.sf-cat-card .sf-cat-card-in {
+  /* padding: 35px 32px 31px 39px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 35px;
+}
+.sf-cat-card-in .sfc-card-img {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sf-cat-card-in .sfc-card-title {
+  color: var(--black-01);
+  margin-bottom: 2px;
+  text-align: center;
+}
+.sf-cat-card-in .sfc-card-content {
+  color: var(--grey-01);
+}
+.sf-cat-slider {
+  height: 6px;
+  background: var(--dGrey-01);
+  border-radius: 30px;
+}
+.sf-cat-slider-current {
+  height: 6px;
+  background: var(--darkGreen-01);
+  width: 300px;
+  border-radius: 30px;
+}
+
+/* Popular Products  */
+.popular-products {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+.site-pop-pro {
+  background: var(--white);
+}
+.site-pop-pro .sp-pro-title {
+  text-align: center;
+  padding-bottom: 16px;
+}
+.site-pop-pro .sp-pro-content {
+  text-align: center;
+}
+.site-pop-pro .btn-sp-pro {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  outline: none;
+  border: none;
+  padding: 0;
+}
+.btn-sp-pro .sp-pro-more {
+  width: 200px;
+  height: 53px;
+  border-radius: 8px;
+  border: 1px solid var(--darkGreen-01);
+  margin-bottom: 0;
+  padding: 14px 10px;
+}
+
+/* Promo Banner */
+.promo-banner {
+  margin-top: 80px;
+}
+.promo-banner .site-promo-banner {
+  border-radius: 16px;
+  background: var(--orange-03);
+  height: 400px;
+  position: relative;
+}
+.site-promo-banner .sp-banner-images {
+  position: relative;
+  top: -15px;
+  left: 80px;
+
+  width: 382px;
+  height: 430px;
+}
+.site-promo-banner .sp-banner-images img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 396px;
+  width: 291px;
+}
+.site-promo-banner .sp-banner-images img:nth-child(2) {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 312px;
+  width: 295px;
+}
+.site-promo-banner .sp-banner-text {
+  position: absolute;
+  top: 94px;
+  right: 135px;
+
+  width: 483px;
+}
+.site-promo-banner .sp-banner-text .spb-text-title {
+  margin-bottom: 16px;
+}
+.site-promo-banner .sp-banner-text .spb-text-content {
+  margin-bottom: 32px;
+}
+
+/* Blog  */
+.blog {
+  margin-top: 80px;
+}
+.blog .site-blog .sb-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 52px;
+}
+.site-blog .sb-title .btn-main button {
+  padding: 10px 16px;
+  width: 134px;
+  box-sizing: border-box;
+}
+.card-blogs {
+  display: flex;
+}
+.card-blog {
+  max-width: 384px;
+  max-height: 444px;
+  width: 384px;
+  height: 444px;
+
+  margin-right: 24px;
+}
+.card-blog:last-child {
+  margin-right: 0;
+}
+.card-blog .cb-image {
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.card-blog .cb-text {
+  width: 100%;
+  height: 148px;
+  overflow: hidden;
+}
+.card-blog .cb-text .cbt-date {
+  margin-bottom: 12px;
+}
+.card-blog .cb-text .cbt-title {
+  margin-bottom: 4px;
+}
+
+@media (min-width: 1440.01px) {
+  .site-header,
+  section,
+  footer {
+    max-width: 1440px;
+  }
+  .container {
+    max-width: 1368px;
+  }
+}

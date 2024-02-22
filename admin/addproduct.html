@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <!-- Link use for icons by https://iconscout.com/unicons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <!-- By using boostrap v5.0.1 -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <!-- For swiper slider by using https://swiperjs.com -->
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
+
+    <!-- For fancy box by using jquery.fancybox.min.css -->
+    <link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css" />
+    <!-- For custom css -->
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <link rel="stylesheet" href="../assets/css/productlist.css" />
+    <link rel="stylesheet" href="../assets/css/addproduct.css" />
+  </head>
+
+  <body class="body-fixed">
+    <!-- Admin Header Start -->
+
+    <header class="admin-header">
+      <div class="container">
+        <div class="site-admin-header">
+          <div class="sah-left">
+            <a href="../index.html">
+              <div class="sah-l-logo">
+                <img src="../logo.png" alt="" />
+              </div>
+            </a>
+          </div>
+          <div class="sah-right">
+            <div class="sah-r-avatar">
+              <img src="../assets/images/avatar.jpg" alt="" />
+              <div class="sah-r-a-status-online"></div>
+
+              <div class="sah-ra-show">
+                <div class="sah-ra-s-top">
+                  <div class="sah-ra-st-left">
+                    <img src="../assets/images/avatar.jpg" alt="" />
+                    <div class="sah-r-a-status-online"></div>
+                  </div>
+                  <div class="sah-ra-st-right">
+                    <div class="sah-ra-st-r-title eh6">PuuGoo</div>
+                    <div
+                      class="sah-ra-st-r-content eh"
+                      style="color: var(--grey-01)"
+                    >
+                      Admin
+                    </div>
+                  </div>
+                </div>
+                <div class="sah-ra-s-divider"></div>
+                <a href="">
+                  <div class="sah-ra-s-mid">
+                    <i class="uil uil-user"></i>
+                    <div
+                      class="sah-ra-sm-title eh"
+                      style="color: var(--grey-01)"
+                    >
+                      My Profile
+                    </div>
+                  </div>
+                </a>
+                <div class="sah-ra-s-divider"></div>
+                <a href="">
+                  <div class="sah-ra-s-bot">
+                    <i class="uil uil-sign-out-alt"></i>
+                    <div
+                      class="sah-ra-sm-title eh"
+                      style="color: var(--red-01)"
+                    >
+                      Logout
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="main-admin">
+      <div class="container">
+        <div class="site-main-admin">
+          <div class="sma-left">
+            <a href="../admin.html">
+              <div class="sma-l-dashboard">
+                <div class="sma-l-heading active">
+                  <div class="sma-lh-left">
+                    <i class="uil uil-box"></i>
+                    <div class="sma-lh-title eh6 active">Dashboard</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="sma-l-product">
+              <div class="sma-l-heading">
+                <div class="sma-lh-left">
+                  <i class="uil uil-box"></i>
+                  <div class="sma-lh-title eh6">Product</div>
+                </div>
+                <div class="sma-lh-right">
+                  <i class="uil uil-arrow-right active"></i>
+                  <i class="uil uil-arrow-down"></i>
+                </div>
+              </div>
+              <div class="sma-l-items">
+                <a href="productlist.html">
+                  <div class="sma-l-item eh" style="color: var(--black-03)">
+                    <i class="uil uil-circle"></i>
+                    Product List
+                  </div>
+                </a>
+                <a href="addproduct.html">
+                  <div class="sma-l-item eh" style="color: var(--black-03)">
+                    <i class="uil uil-circle"></i>
+                    Add Product
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="sma-l-category">
+              <div class="sma-l-heading">
+                <div class="sma-lh-left">
+                  <i class="uil uil-swatchbook"></i>
+                  <div class="sma-lh-title eh6">Category</div>
+                </div>
+                <div class="sma-lh-right">
+                  <i class="uil uil-arrow-right active"></i>
+                  <i class="uil uil-arrow-down"></i>
+                </div>
+              </div>
+              <div class="sma-l-items">
+                <a href="categorylist.html">
+                  <div class="sma-l-item eh" style="color: var(--black-03)">
+                    <i class="uil uil-circle"></i>
+                    Category List
+                  </div>
+                </a>
+                <a href="addcategory.html">
+                  <div class="sma-l-item eh" style="color: var(--black-03)">
+                    <i class="uil uil-circle"></i>
+                    Add Category
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="sma-l-brand">
+              <div class="sma-l-heading">
+                <div class="sma-lh-left">
+                  <i class="uil uil-box"></i>
+                  <div class="sma-lh-title eh6">Brand</div>
+                </div>
+                <div class="sma-lh-right">
+                  <i class="uil uil-arrow-right active"></i>
+                  <i class="uil uil-arrow-down"></i>
+                </div>
+              </div>
+              <div class="sma-l-items">
+                <a href="">
+                  <div class="sma-l-item eh" style="color: var(--black-03)">
+                    <i class="uil uil-circle"></i>
+                    Brand List
+                  </div>
+                </a>
+                <a href="">
+                  <div class="sma-l-item eh" style="color: var(--black-03)">
+                    <i class="uil uil-circle"></i>
+                    Add Brand
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="sma-l-blog">
+              <div class="sma-l-heading">
+                <div class="sma-lh-left">
+                  <i class="uil uil-blogger"></i>
+                  <div class="sma-lh-title eh6">Blog</div>
+                </div>
+                <div class="sma-lh-right">
+                  <i class="uil uil-arrow-right active"></i>
+                  <i class="uil uil-arrow-down"></i>
+                </div>
+              </div>
+              <div class="sma-l-items">
+                <a href="">
+                  <div class="sma-l-item eh" style="color: var(--black-03)">
+                    <i class="uil uil-circle"></i>
+                    Blog List
+                  </div>
+                </a>
+                <a href="">
+                  <div class="sma-l-item eh" style="color: var(--black-03)">
+                    <i class="uil uil-circle"></i>
+                    Add Blog
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="sma-l-user">
+              <div class="sma-l-heading">
+                <div class="sma-lh-left">
+                  <i class="uil uil-users-alt"></i>
+                  <div class="sma-lh-title eh6">User</div>
+                </div>
+                <div class="sma-lh-right">
+                  <i class="uil uil-arrow-right active"></i>
+                  <i class="uil uil-arrow-down"></i>
+                </div>
+              </div>
+              <div class="sma-l-items">
+                <a href="">
+                  <div class="sma-l-item eh" style="color: var(--black-03)">
+                    <i class="uil uil-circle"></i>
+                    User List
+                  </div>
+                </a>
+                <a href="">
+                  <div class="sma-l-item eh" style="color: var(--black-03)">
+                    <i class="uil uil-circle"></i>
+                    Add User
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="sma-l-profile">
+              <div class="sma-l-heading">
+                <div class="sma-lh-left">
+                  <i class="uil uil-user-circle"></i>
+                  <div class="sma-lh-title eh6">Profile</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sma-right">
+            <div class="sma-r-top">
+              <div class="sma-rt-left">
+                <div class="sma-rt-l-title eh6">Product Add</div>
+                <div class="sma-rt-l-content eh" style="color: var(--grey-01)">
+                  Create new product
+                </div>
+              </div>
+            </div>
+            <div class="sma-r-bot">
+              <form action="">
+                <div class="sma-rb-item">
+                  <label for="">Product Name</label>
+                  <input type="text" />
+                </div>
+                <div class="sma-rb-item">
+                  <label for="">Category</label>
+                  <select name="" id="" class="form-select">
+                    <option value="" selected>Choose Category</option>
+                    <option value="Computer">Computer</option>
+                  </select>
+                </div>
+                <div class="sma-rb-item">
+                  <label for="">Sub Category</label>
+                  <select name="" id="" class="form-select">
+                    <option value="" selected>Choose Sub Category</option>
+                    <option value="Computer">Laptop</option>
+                  </select>
+                </div>
+                <div class="sma-rb-item">
+                  <label for="">Brand</label>
+                  <select name="" id="" class="form-select">
+                    <option value="" selected>Choose Brand</option>
+                    <option value="Computer">Samsung</option>
+                  </select>
+                </div>
+                <div class="sma-rb-item">
+                  <label for="">Unit</label>
+                  <select name="" id="" class="form-select">
+                    <option value="" selected>Choose Unit</option>
+                    <option value="Computer">1</option>
+                  </select>
+                </div>
+                <div class="sma-rb-item">
+                  <label for="">SKU</label>
+                  <input type="text" />
+                </div>
+                <div class="sma-rb-item">
+                  <label for="">Minimun Qty</label>
+                  <input type="text" />
+                </div>
+                <div class="sma-rb-item">
+                  <label for="">Quantity</label>
+                  <input type="text" />
+                </div>
+                <div class="sma-rb-item form-floating">
+                  <label
+                    for="floatingTextarea2"
+                    style="position: relative; padding: 0"
+                    >Description</label
+                  >
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea2"
+                    style="height: 100px"
+                  ></textarea>
+                </div>
+                <div class="sma-rb-item">
+                  <label for="">Tax</label>
+                  <select name="" id="" class="form-select">
+                    <option value="" selected>Choose Tax</option>
+                    <option value="Computer">10%</option>
+                  </select>
+                </div>
+                <div class="sma-rb-item">
+                  <label for="">Discount Type</label>
+                  <select name="" id="" class="form-select">
+                    <option value="" selected>Percentage</option>
+                    <option value="Computer">10%</option>
+                  </select>
+                </div>
+                <div class="sma-rb-item">
+                  <label for="">Price</label>
+                  <input type="text" />
+                </div>
+                <div class="sma-rb-item">
+                  <label for="">Status</label>
+                  <select name="" id="" class="form-select">
+                    <option value="" selected>Closed</option>
+                    <option value="Computer">Opened</option>
+                  </select>
+                </div>
+                <div class="sma-rb-item">
+                  <label for="insert-img">
+                    <i class="uil uil-cloud-upload"></i>
+                    <div class="sma-rb-i-title">
+                      Drag and drop a file to upload
+                    </div>
+                  </label>
+                  <input type="file" id="insert-img" />
+                </div>
+              </form>
+              <div class="sma-r-end">
+                <div class="btn-main">
+                  <button class="btn-general">Submit</button>
+                  <button class="btn-ghost">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin Header End -->
+
+    <!-- For jquery -->
+    <script src="../assets/js/jquery-3.5.1.min.js"></script>
+    <!-- For boostrap -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- For popper cdn 2.9.x -->
+    <script src="../assets/js/popper.min.js"></script>
+
+    <!-- For fontawesome -->
+    <script src="../assets/js/font-awesome.min.js"></script>
+
+    <!-- For swipper slider -->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+
+    <!-- For mixiup -- filter -->
+    <script src="../assets/js/jquery.mixitup.min.js"></script>
+
+    <!-- For fancybox -->
+    <script src="../assets/js/jquery.fancybox.min.js"></script>
+
+    <!-- For parallax -->
+    <script src="../assets/js/parallax.min.js"></script>
+
+    <!-- For gsap -->
+    <script src="../assets/js/gsap.min.js"></script>
+
+    <!-- For scroll trigger -->
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <!-- For scroll to plugin -->
+    <script src="../assets/js/ScrollToPlugin.min.js"></script>
+    <!-- For rellax -->
+    <!-- <script src="../assets/js/rellax.min.js"></script>
+      <script src="../assets/js/rellax-custom.js"></script> -->
+    <!-- For smooth scroll -->
+    <script src="../assets/js/smooth-scroll.js"></script>
+    <!-- For custom js -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

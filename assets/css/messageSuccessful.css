@@ -1,0 +1,35 @@
+/* Message */
+.message {
+  padding: 171px 364px;
+}
+.message .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 713px;
+}
+.site-message svg {
+  margin-bottom: 32px;
+}
+.sm-title {
+  margin-bottom: 12px;
+}
+.sm-content {
+  margin-bottom: 32px;
+  text-align: center;
+}
+.site-message .btn-main .btn-general {
+  width: 160px;
+  height: 46px;
+}
+.site-message .btn-main .btn-general:nth-child(2) {
+  background: var(--dGrey-01);
+  color: var(--black-01);
+  margin-left: 16px;
+}

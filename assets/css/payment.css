@@ -1,0 +1,119 @@
+/* Main Cart */
+.smc-l-payment-method {
+  width: 788px;
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid var(--dGrey-01);
+  padding: 24px 32px;
+  margin-bottom: 28px;
+}
+.smc-la-heading {
+  margin-bottom: 24px;
+}
+.smc-la-content {
+  display: flex;
+  align-items: center;
+}
+.option {
+  margin: 0;
+  margin-right: 17px;
+}
+.smc-la-text {
+  display: flex;
+  align-items: center;
+}
+.smc-la-t-img {
+  margin-right: 16px;
+  background: var(--lGrey-02);
+  border-radius: 8px;
+}
+.smc-la-t-img img {
+  width: 100px;
+  height: 52px;
+}
+.smc-la-tc-title {
+  margin-bottom: 4px;
+}
+.smc-l-payment-method .option label {
+  border-radius: 100%;
+}
+.smc-la-divider {
+  margin: 20px 0;
+  border: 1px solid var(--dGrey-01);
+}
+.smc-l-add-debit-card {
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid var(--dGrey-01);
+  padding: 32px 24px;
+}
+.smc-l-adc-heading {
+  margin-bottom: 24px;
+}
+.smc-l-adc-content {
+  width: 740px;
+}
+.smc-l-adc-content form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.smc-l-adc-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 362px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+.smc-l-adc-list:nth-child(2),
+.smc-l-adc-list:nth-child(4) {
+  margin-right: 0;
+}
+.smc-l-adc-list:nth-child(3),
+.smc-l-adc-list:nth-child(4) {
+  margin-bottom: 0;
+}
+.smc-l-adc-list label {
+  margin-bottom: 8px;
+}
+.smc-l-adc-list input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  background: var(--white);
+  border: 1px solid var(--dGrey-01);
+}
+.smc-l-adc-list input::placeholder {
+  color: var(--grey-01);
+}
+.smc-l-adc-l-content {
+  width: 100%;
+  position: relative;
+}
+.smc-l-adc-l-content svg {
+  position: absolute;
+  right: 16px;
+  top: 11px;
+}
+.smc-l-add-debit-card .btn-main {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+.smc-l-add-debit-card .btn-main .btn-general {
+  width: 160px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 10px;
+}
+.smc-l-add-debit-card .btn-main .btn-general:first-child {
+  background: var(--dGrey-01);
+  color: var(--black-01);
+}
+.related-products {
+  margin-top: 32px;
+}
