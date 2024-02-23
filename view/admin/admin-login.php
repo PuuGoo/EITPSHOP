@@ -1,3 +1,14 @@
+<?php ob_start(); ?>
+
+<?php 
+
+if ($_SESSION['VaiTro'] === 1) {
+  header("Location: ?mod=page&act=admin");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

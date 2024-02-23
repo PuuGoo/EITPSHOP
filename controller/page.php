@@ -127,8 +127,9 @@ if (isset($act)) {
                     $_SESSION['HinhAnh'] = $checklogin['HinhAnh'];
                     $_SESSION['MobileNumber'] = $checklogin['MobileNumber'];
                     $_SESSION['MatKhau'] = $checklogin['MatKhau'];
+                     header("Location: ?mod=page&act=admin");
                     echo "<script type='text/javascript'>alert('Login Successfully!');</script>";
-                    header("Location: ?mod=page&act=admin");
+                   
                 } else {
                     echo "<script type='text/javascript'>alert('Login Failled! Please Login Again!');</script>";
                     $mes = "Login Failled!";
