@@ -31,7 +31,7 @@ if (isset($mod)) {
             }
             if (isset($_POST['cancel'])) {
 
-                header("Location: ?mod=user&act=userlist");            
+                header("Location: ?mod=user&act=userlist");
             }
             include_once "view/admin/admin-header.php";
             include_once "view/admin/adduser.php";
@@ -69,7 +69,7 @@ if (isset($mod)) {
                 }
                 if (isset($_POST['cancel'])) {
 
-                    header("Location: ?mod=user&act=userlist");           
+                    header("Location: ?mod=user&act=userlist");
                 }
             }
             include_once "view/admin/admin-header.php";
@@ -77,10 +77,20 @@ if (isset($mod)) {
             include_once "view/admin/admin-footer.php";
             break;
         case 'profile':
+            $show_user = getUserById($_SESSION['id']);
+            if (isset($_POST['profile_user'])) {
+                $user_fname = $_POST['user_fname'];
+                $user_lname = $_POST['user_lname'];
+                $user_email = $_POST['user_email'];
+                $user_phone = $_POST['user_phone'];
+                $user_name = $_POST['user_name'];
+                $user_password = $_POST['user_password'];
+                updateUserProfileAdmin($_SESSION['id'], $user_fname, $user_lname, $user_email, $user_phone, $user_name, $user_password);
+                header("Location: ?mod=user&act=profile");
+            }
             include_once "view/admin/admin-header.php";
             include_once "view/admin/profile.php";
             include_once "view/admin/admin-footer.php";
-            break;            
-        
+            break;
     }
 }

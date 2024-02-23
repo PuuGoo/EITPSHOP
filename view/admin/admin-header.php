@@ -1,9 +1,20 @@
 <?php ob_start(); ?>
-<?php 
+<?php
 
-    if($_SESSION['VaiTro'] !== 1) {
-      header("Location: ?mod=page&act=admin-login");
-    } 
+if ($_SESSION['VaiTro'] !== 1) {
+  header("Location: ?mod=page&act=adminlogin");
+}
+
+if (isset($_GET['act'])) {
+  if ($_GET['act'] === "admin") {
+    if (isset($_GET['method'])) {
+      if ($_GET['method'] === "logout") {
+        session_destroy();
+        header("Location: ?mod=page&act=adminlogin");
+      }
+    }
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +41,7 @@
   if (isset($act)) {
     if ($act === "addcategory" || $act === "updatecategory" || $act === "updateproduct" || $act === "addproduct" || $act === "updatesubcategory" || $act === "addsubcategory" || $act === "addbrand" || $act === "updatebrand" || $act === "addblog" || $act === "updateblog" || $act === "adduser" || $act === "updateuser" || $act === "profile") {
       echo '<link rel="stylesheet" href="assets/css/productlist.css?v=<?php echo time(); ?>" />';
-  }
+    }
   }
 
   ?>
@@ -46,13 +57,13 @@
                                                 break;
                                               case 'brandlist':
                                                 echo "productlist";
-                                                break; 
+                                                break;
                                               case 'bloglist':
                                                 echo "productlist";
-                                                break;   
+                                                break;
                                               case 'userlist':
                                                 echo "productlist";
-                                                break;                                                                                                                                                                                                                                                   
+                                                break;
 
                                               default:
                                                 echo $act;
@@ -78,13 +89,13 @@
         </div>
         <div class="sah-right">
           <div class="sah-r-avatar">
-            <img src="assets/images/avatar.jpg" alt="" />
+            <img src="assets/images/<?php echo $_SESSION['HinhAnh']; ?>" alt="" />
             <div class="sah-r-a-status-online"></div>
 
             <div class="sah-ra-show">
               <div class="sah-ra-s-top">
                 <div class="sah-ra-st-left">
-                  <img src="assets/images/avatar.jpg" alt="" />
+                  <img src="assets/images/<?php echo $_SESSION['HinhAnh']; ?>" alt="" />
                   <div class="sah-r-a-status-online"></div>
                 </div>
                 <div class="sah-ra-st-right">
@@ -104,7 +115,7 @@
                 </div>
               </a>
               <div class="sah-ra-s-divider"></div>
-              <a href="">
+              <a href="?mod=page&act=admin&method=logout">
                 <div class="sah-ra-s-bot">
                   <i class="uil uil-sign-out-alt"></i>
                   <div class="sah-ra-sm-title eh" style="color: var(--red-01)">
@@ -212,7 +223,7 @@
                 </div>
               </a>
             </div>
-          </div>          
+          </div>
 
           <div class="sma-l-brand">
             <div class="sma-l-heading">
@@ -299,7 +310,7 @@
                   <i class="uil uil-user-circle"></i>
                   <div class="sma-lh-title eh6">Profile</div>
                 </div>
-              </a>                         
+              </a>
             </div>
           </div>
         </div>

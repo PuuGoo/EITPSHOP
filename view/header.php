@@ -1,11 +1,30 @@
-<?php 
-  ob_start();
-  if(isset($_GET['method'])) {
-    if($_GET['method'] === "logout") {
-      session_destroy();
-      header("Location: ?mod=page&act=home");
+<?php
+ob_start();
+if (isset($_GET['method'])) {
+  if ($_GET['method'] === "logout") {
+    session_destroy();
+    header("Location: ?mod=page&act=home");
+  }
+}
+
+if (isset($_GET['act'])) {
+  if ($_GET['act'] === "home") {
+    if (isset($_GET['method'])) {
+      if ($_GET['method'] === "logout") {
+        session_destroy();
+        header("Location: ?mod=page&act=home");
+      }
+    }
+  } 
+  if ($_GET['act'] === "admin") {
+    if (isset($_GET['method'])) {
+      if ($_GET['method'] === "logout") {
+        session_destroy();
+        header("Location: ?mod=page&act=adminlogin");
+      }
     }
   }
+}
 
 ?>
 
@@ -103,14 +122,14 @@
             </a>
             <div class="divider2"></div>
             <div class="header-btn header-user">
-              <?php if($_SESSION['id']): ?>
+              <?php if ($_SESSION['id']) : ?>
                 <img src="assets/images/<?= $_SESSION['HinhAnh'] ?>" alt="">
-              <?php else: ?>
+              <?php else : ?>
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#E4E9EE" />
-                <path d="M24 24C26.7614 24 29 21.7614 29 19C29 16.2386 26.7614 14 24 14C21.2386 14 19 16.2386 19 19C19 21.7614 21.2386 24 24 24Z" fill="#818B9C" />
-                <path d="M23.9999 26.5C18.9899 26.5 14.9099 29.86 14.9099 34C14.9099 34.28 15.1299 34.5 15.4099 34.5H32.5899C32.8699 34.5 33.0899 34.28 33.0899 34C33.0899 29.86 29.0099 26.5 23.9999 26.5Z" fill="#818B9C" />
-              </svg>
+                  <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#E4E9EE" />
+                  <path d="M24 24C26.7614 24 29 21.7614 29 19C29 16.2386 26.7614 14 24 14C21.2386 14 19 16.2386 19 19C19 21.7614 21.2386 24 24 24Z" fill="#818B9C" />
+                  <path d="M23.9999 26.5C18.9899 26.5 14.9099 29.86 14.9099 34C14.9099 34.28 15.1299 34.5 15.4099 34.5H32.5899C32.8699 34.5 33.0899 34.28 33.0899 34C33.0899 29.86 29.0099 26.5 23.9999 26.5Z" fill="#818B9C" />
+                </svg>
               <?php endif; ?>
             </div>
             <div class="sah-ra-show">
@@ -159,22 +178,24 @@
               <i class="uil uil-arrow-down"></i>
             </div>
             <div class="sa-m-content">
-              <?php foreach($show_cats as $cat): ?>
-              <ul>
-                <li><a href="?mod=page&act=shop"><?= $cat['TenDanhMuc'] ?></a></li>
-              </ul>
+              <?php foreach ($show_cats as $cat) : ?>
+                <ul>
+                  <li><a href="?mod=page&act=shop"><?= $cat['TenDanhMuc'] ?></a></li>
+                </ul>
               <?php endforeach; ?>
             </div>
           </li>
-        </ul>                       
+        </ul>
       </div>
-      </div>
+    </div>
     </div>
     </div>
   </header>
   <!-- header ends -->
   <!-- Sign in -->
-  <section class="sign-in <?php if($mes === "Login Failled!" || $mes === "Register Successfully!"){echo "si-active";} ?>">
+  <section class="sign-in <?php if ($mes === "Login Failled!" || $mes === "Register Successfully!") {
+                            echo "si-active";
+                          } ?>">
     <div class="container">
       <div class="site-sign-in">
         <div class="ssi-title eh5">Sign In</div>
@@ -213,7 +234,9 @@
   <!-- Sign in end-->
 
   <!-- Register in -->
-  <section class="register sign-in <?php if($mes === "Register Failled!") {echo "r-active";} ?>">
+  <section class="register sign-in <?php if ($mes === "Register Failled!") {
+                                      echo "r-active";
+                                    } ?>">
     <div class="container">
       <div class="site-sign-in">
         <div class="ssi-title eh5">Register</div>
