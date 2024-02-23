@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".header-user").click(function () {
+  $(".header-user svg").click(function () {
     $(".background-opacity").toggleClass("bo-active");
     $(".sign-in").toggleClass("si-active");
   });
@@ -8,6 +8,7 @@ $(document).ready(function () {
     $(".sign-in").removeClass("si-active");
     $(".register").removeClass("r-active");
     $(".forgot-password").removeClass("fp-active");
+    $(".sah-ra-show").removeClass("active");
   });
   $(".btn-register").click(function () {
     $(".sign-in").removeClass("si-active");
@@ -23,6 +24,10 @@ $(document).ready(function () {
     $(".sign-in").removeClass("si-active");
     $(".register").removeClass("r-active");
     $(".forgot-password").toggleClass("fp-active");
+  });
+  $(".header-user img").click(function () {
+    $(".background-opacity").toggleClass("bo-active");
+    $(".sah-ra-show").toggleClass("active");
   });
 
   // Admin.html
@@ -71,4 +76,14 @@ $(document).ready(function () {
     $(".sma-rb-t-bot").toggleClass("active");
   });
   $(".sma-rb-item label").toggleClass("eh6");
+
+  // Home -> Secondary-Navigation
+  $(".sa-m-shop").hover(function() {
+    $(".sa-m-content").toggleClass("show");
+  })
+
+  // // Login don't reset page
+  // $(".ssi-form").on("submit", function(e) {
+  //   e.preventDefault();
+  // })
 });

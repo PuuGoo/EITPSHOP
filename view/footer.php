@@ -121,7 +121,7 @@
   <!-- For smooth scroll -->
   <script src="assets/js/smooth-scroll.js"></script>
   <!-- For custom js -->
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=<?php echo time(); ?>"></script>
 </body>
 
 </html>

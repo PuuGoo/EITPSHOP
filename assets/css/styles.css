@@ -2,6 +2,7 @@
 .main-banner {
   background: var(--dGrey-03);
   position: relative;
+  z-index: -1;
 }
 .mb-text {
   padding: 100px 606px 192px 0;

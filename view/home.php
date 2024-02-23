@@ -1,6 +1,5 @@
 
 
-
   <section class="main-banner">
     <div class="container">
       <div class="site-banner">

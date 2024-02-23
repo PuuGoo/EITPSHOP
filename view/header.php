@@ -1,3 +1,14 @@
+<?php 
+  ob_start();
+  if(isset($_GET['method'])) {
+    if($_GET['method'] === "logout") {
+      session_destroy();
+      header("Location: ?mod=page&act=home");
+    }
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,41 +103,96 @@
             </a>
             <div class="divider2"></div>
             <div class="header-btn header-user">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <?php if($_SESSION['id']): ?>
+                <img src="assets/images/<?= $_SESSION['HinhAnh'] ?>" alt="">
+              <?php else: ?>
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#E4E9EE" />
                 <path d="M24 24C26.7614 24 29 21.7614 29 19C29 16.2386 26.7614 14 24 14C21.2386 14 19 16.2386 19 19C19 21.7614 21.2386 24 24 24Z" fill="#818B9C" />
                 <path d="M23.9999 26.5C18.9899 26.5 14.9099 29.86 14.9099 34C14.9099 34.28 15.1299 34.5 15.4099 34.5H32.5899C32.8699 34.5 33.0899 34.28 33.0899 34C33.0899 29.86 29.0099 26.5 23.9999 26.5Z" fill="#818B9C" />
               </svg>
-
+              <?php endif; ?>
+            </div>
+            <div class="sah-ra-show">
+              <div class="sah-ra-s-top">
+                <div class="sah-ra-st-left">
+                  <img src="assets/images/<?= $_SESSION['HinhAnh'] ?>" width="48" height="48" alt="" />
+                  <div class="sah-r-a-status-online"></div>
+                </div>
+                <div class="sah-ra-st-right">
+                  <div class="sah-ra-st-r-title eh6">PuuGoo</div>
+                  <div class="sah-ra-st-r-content eh" style="color: var(--grey-01)">
+                    Admin
+                  </div>
+                </div>
+              </div>
+              <div class="sah-ra-s-divider"></div>
+              <a href="?mod=user&act=profile">
+                <div class="sah-ra-s-mid">
+                  <i class="uil uil-user"></i>
+                  <div class="sah-ra-sm-title eh" style="color: var(--grey-01)">
+                    My Profile
+                  </div>
+                </div>
+              </a>
+              <div class="sah-ra-s-divider"></div>
+              <a href="?mod=page&act=home&method=logout">
+                <div class="sah-ra-s-bot">
+                  <i class="uil uil-sign-out-alt"></i>
+                  <div class="sah-ra-sm-title eh" style="color: var(--red-01)">
+                    Logout
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
+      </div>
+      <div class="secondary-navigation">
+        <ul class="sa-menu eh6">
+          <li class=""><a href="?mod=page&act=home">Home</a></li>
+          <li class=""><a href="?mod=page&act=about">About Us</a></li>
+          <li class=""><a href="?mod=page&act=blog">Blog</a></li>
+          <li class="sa-m-shop">
+            <div class="sa-m-title">
+              <div class="sa-mt-heading">Shop</div>
+              <i class="uil uil-arrow-down"></i>
+            </div>
+            <div class="sa-m-content">
+              <?php foreach($show_cats as $cat): ?>
+              <ul>
+                <li><a href="?mod=page&act=shop"><?= $cat['TenDanhMuc'] ?></a></li>
+              </ul>
+              <?php endforeach; ?>
+            </div>
+          </li>
+        </ul>                       
+      </div>
       </div>
     </div>
     </div>
   </header>
   <!-- header ends -->
-
   <!-- Sign in -->
-  <section class="sign-in">
+  <section class="sign-in <?php if($mes === "Login Failled!" || $mes === "Register Successfully!"){echo "si-active";} ?>">
     <div class="container">
       <div class="site-sign-in">
         <div class="ssi-title eh5">Sign In</div>
-        <form action="" class="ssi-form">
+        <form action="" class="ssi-form" method="post">
           <div class="ssi-f-item">
             <label for="" class="eh">Phone Number or Email</label>
-            <input type="text" placeholder="Enter your phone number or email">
+            <input type="text" placeholder="Enter your phone number or email" name="username">
           </div>
           <div class="ssi-f-item">
             <label for="" class="eh">Password</label>
-            <input type="text" placeholder="Enter your password">
+            <input type="password" placeholder="Enter your password" name="password">
+          </div>
+          <div class="ssi-forgot-password p2-medium-14" style="color: var(--darkGreen-03)">Forgot Password?</div>
+          <div class="btn-main">
+            <button class="btn-general eh" type="submit" name="sign-in">Sign In</button>
+            <button class="btn-ghost eh btn-register" type="button">Register</button>
           </div>
         </form>
-        <div class="ssi-forgot-password p2-medium-14" style="color: var(--darkGreen-03)">Forgot Password?</div>
-        <div class="btn-main">
-          <button class="btn-general eh">Sign In</button>
-          <button class="btn-ghost eh btn-register">Register</button>
-        </div>
         <div class="ssi-article">
           <div class="ssi-a-content p2-medium-14" style="color: var(--grey-01)">Or using other method</div>
           <div class="ssi-a-divider"></div>
@@ -147,29 +213,29 @@
   <!-- Sign in end-->
 
   <!-- Register in -->
-  <section class="register sign-in">
+  <section class="register sign-in <?php if($mes === "Register Failled!") {echo "r-active";} ?>">
     <div class="container">
       <div class="site-sign-in">
         <div class="ssi-title eh5">Register</div>
-        <form action="" class="ssi-form">
+        <form action="" class="ssi-form" method="post">
           <div class="ssi-f-item">
             <label for="" class="eh">Name</label>
-            <input type="text" placeholder="Enter your name">
+            <input type="text" placeholder="Enter your name" name="fullName">
           </div>
           <div class="ssi-f-item">
             <label for="" class="eh">Phone Number or Email</label>
-            <input type="text" placeholder="Enter your phone number or email">
+            <input type="text" placeholder="Enter your phone number or email" name="username">
           </div>
           <div class="ssi-f-item">
             <label for="" class="eh">Password</label>
-            <input type="text" placeholder="Enter your password">
+            <input type="password" placeholder="Enter your password" name="password">
+          </div>
+          <div class="ssi-forgot-password p2-medium-14" style="color: var(--darkGreen-03)">Forgot Password?</div>
+          <div class="btn-main">
+            <button class="btn-general eh" type="submit" name="register">Register</button>
+            <button class="btn-ghost eh btn-back" type="button">Back</button>
           </div>
         </form>
-        <div class="ssi-forgot-password p2-medium-14" style="color: var(--darkGreen-03)">Forgot Password?</div>
-        <div class="btn-main">
-          <button class="btn-general eh">Register</button>
-          <button class="btn-ghost eh btn-back">Back</button>
-        </div>
         <div class="ssi-article">
           <div class="ssi-a-content p2-medium-14" style="color: var(--grey-01)">Or using other method</div>
           <div class="ssi-a-divider"></div>

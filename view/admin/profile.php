@@ -9,8 +9,25 @@
               </div>
             </div>
             <div class="sma-r-bot">
-              <div class="sma-rb-start"></div>
-              <form action="" method="post" enctype="multipart/form-data">
+            <form action="" method="post" enctype="multipart/form-data">
+              <div class="sma-rb-heading"></div>
+              <div class="sma-rb-start">
+                <div class="sma-rb-s-left">
+                  <div class="sma-rb-sl-image">
+                    <img src="assets/images/dog-img-01.jpg" width="200" height="200" alt="">
+                  </div>
+                  <div class="sma-rb-sl-text">
+                    <div class="sma-rb-sl-t-title eh6">PuuGoo</div>
+                    <div class="sma-rb-sl-t-content eh" style="color: var(--grey-01)">Update Your Photo and Personal Details</div>
+                  </div>
+                </div>
+                <div class="sma-rb-s-right">
+                  <div class="btn-main">
+                    <button class="btn-general">Save</button>
+                    <button class="btn-ghost">Cancel</button>
+                  </div>
+                </div>
+              </div>
                 <div class="sma-rb-item">
                   <label for="">First Name</label>
                   <input type="text" name="user_fname"/>
@@ -35,15 +52,6 @@
                   <label for="">Password</label>
                   <input type="text" name="user_password"/>
                 </div>
-                <!-- <div class="sma-rb-item">
-                  <label for="insert-img">
-                    <i class="uil uil-cloud-upload"></i>
-                    <div class="sma-rb-i-title">
-                      Drag and drop a file to upload
-                    </div>
-                  </label>
-                  <input type="file" id="insert-img" name="user_image"/>
-                </div> -->
               <div class="sma-r-end">
                 <div class="btn-main">
                   <button class="btn-general" type="submit" name="profile_user">Submit</button>

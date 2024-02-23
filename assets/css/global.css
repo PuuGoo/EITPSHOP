@@ -214,6 +214,8 @@ a {
   text-decoration: none;
   outline: none;
   background: transparent;
+
+  color: var(--black-01);
 }
 ul {
   list-style: none;
@@ -234,7 +236,7 @@ ul {
 .site-header {
   background: var(--white);
   border-bottom: 1px inset var(--dGrey-01);
-  max-height: 88px;
+  max-height: 200px;
 }
 .site-header .primary-navigation {
   display: flex;
@@ -259,6 +261,9 @@ ul {
   margin: 22px 0;
   width: 856px;
   height: 44px;
+}
+.header-left form {
+  margin-bottom: 0;
 }
 .header-left .categories {
   color: var(--black-01);
@@ -307,11 +312,17 @@ ul {
   margin-left: 55px;
   display: flex;
   align-items: center;
+
+  position: relative;
 }
 .header-btn {
   width: 48px;
   height: 48px;
   margin: 20px 0;
+}
+.header-btn img {
+  border-radius: 50%;
+  height: 44px;
 }
 .divider2 {
   margin: 0 16px;
@@ -320,7 +331,53 @@ ul {
   background: var(--dGrey-01);
   transform: rotate(-90deg);
 }
+.secondary-navigation {
+  position:relative;
+  z-index: 1;
+  height: fit-content;
+  margin-bottom: 22px;
+}
+.sa-menu {
+  display: flex;
+  align-items: center;
+}
+.sa-menu li {
+  margin-right: 32px;
+  border-radius: 40px;
+  padding: 4px 8px;
+}
+.sa-menu li:hover {
+  background: transparent;
+  border-radius: 40px;
+  padding: 4px 8px;
+  box-shadow: inset 8px 8px 12px var(--dGrey-03), inset -6px -6px 8px var(--red-03);
+}
+.sa-m-title {
+  display:flex;
+  align-items: center;
 
+  position:relative;
+}
+.sa-mt-heading {
+  margin-right: 12px;
+}
+.sa-m-content {
+  display: none;
+
+  position: absolute;
+  border-radius: 8px;
+  border: 1px solid var(--dGrey-01);
+  background: var(--white);
+  padding: 8px;
+
+  transform: translateX(-16px);
+}
+.sa-m-content.show {
+  display: block;
+}
+.sa-m-content ul li {
+  margin-bottom: 8px;
+}
 /***** Footer *****/
 .site-footer {
   background: var(--dGrey-03);
@@ -892,4 +949,51 @@ ul {
 }
 .bo-active {
   display: block;
+}
+
+/* Login mini show */
+.sah-ra-show {
+  position: absolute;
+  top: 72px;
+  right: -107px;
+  background: var(--white);
+  width: 160px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--dGrey-01);
+  display: none;
+}
+.sah-ra-show.active {
+  display: block;
+  z-index: 3000;
+  background: var(--white);
+}
+.sah-ra-s-top {
+  display: flex;
+  align-items: center;
+}
+.sah-ra-st-left {
+  margin-right: 8px;
+}
+.sah-ra-st-left .sah-r-a-status-online {
+  top: 47px;
+  left: 41px;
+}
+.sah-ra-st-r-title {
+  margin-bottom: 4px;
+}
+.sah-ra-s-divider {
+  border: 1px solid var(--dGrey-01);
+  margin: 8px 0;
+}
+.sah-ra-s-mid {
+  display: flex;
+  align-items: center;
+}
+.sah-ra-sm-title {
+  margin-left: 12px;
+}
+.sah-ra-s-bot {
+  display: flex;
+  align-items: center;
 }

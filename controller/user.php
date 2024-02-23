@@ -14,7 +14,7 @@ if (isset($mod)) {
         case 'adduser':
             if (isset($_POST['add_user'])) {
 
-                $user_name = $_POST['user_name'];
+                $user_username = $_POST['user_name'];
                 $user_mobile = $_POST['user_mobile'];
                 $user_email = $_POST['user_email'];
                 $user_role = $_POST['user_role'];
@@ -50,7 +50,7 @@ if (isset($mod)) {
                 $user_id = $_GET['user_id'];
                 $show_user = getUserById($user_id);
                 if (isset($_POST['update_user'])) {
-                    $user_name = $_POST['user_name'];
+                    $user_username = $_POST['user_name'];
                     $user_mobile = $_POST['user_mobile'];
                     $user_email = $_POST['user_email'];
                     $user_role = $_POST['user_role'];

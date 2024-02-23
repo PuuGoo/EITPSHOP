@@ -12,7 +12,7 @@
               <form action="" method="post" enctype="multipart/form-data">
                 <div class="sma-rb-item">
                   <label for="">User Name</label>
-                  <input type="text" name="user_name" value="<?= $show_user['HoTen'] ?>"/>
+                  <input type="text" name="user_name" value="<?= $show_user['UserName'] ?>"/>
                 </div>
                 <div class="sma-rb-item">
                   <label for="">Mobile</label>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="sma-rb-item">
                   <label for="">Password</label>
-                  <input type="text" name="user_password"/>
+                  <input type="password" name="user_password" value="<?= $show_user['MatKhau'] ?>"/>
                 </div>
                 <div class="sma-rb-item">
                     <label for="">Status</label>

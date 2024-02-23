@@ -6,7 +6,7 @@ function checkLogin($username, $password)
 {
 
     $conn = connect();
-    $sql = "SELECT * FROM nguoidung WHERE Email = '$username' AND MatKhau = '$password' ";
+    $sql = "SELECT * FROM nguoidung WHERE UserName = '$username' AND MatKhau = '$password' ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -54,23 +54,35 @@ function getUserByUserName($email)
 }
 
 
-function createUser($name, $email, $password, $mobile, $image, $role, $status)
+function createUser($username, $email, $password, $mobile, $image, $role, $status)
 {
 
     $conn = connect();
-    $sql = "INSERT INTO nguoidung(HoTen, Email, MatKhau, VaiTro, HinhAnh, MobileNumber, NgayTao, Status) ";
-    $sql .= "VALUES ('$name', '$email', '$password', '$role', '$image', '$mobile', now(), '$status' ) ";
+    $sql = "INSERT INTO nguoidung(UserName, Email, MatKhau, VaiTro, HinhAnh, MobileNumber, NgayTao, Status) ";
+    $sql .= "VALUES ('$username', '$email', '$password', '$role', '$image', '$mobile', now(), '$status' ) ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $data;
 }
 
-function updateUser($id, $name, $email, $password, $mobile, $image, $role, $status)
+function createUser_02($fullName, $username, $password)
+{
+
+    $conn = connect();
+    $sql = "INSERT INTO nguoidung(HoTen, UserName, MatKhau, NgayTao ) ";
+    $sql .= "VALUES ('$fullName', '$username', '$password', now() ) ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $data;
+}
+
+function updateUser($id, $username, $email, $password, $mobile, $image, $role, $status)
 {
     $conn = connect();
     $sql = "UPDATE nguoidung SET ";
-    $sql .= "HoTen = '$name', ";
+    $sql .= "UserName = '$username', ";
     $sql .= "Email = '$email', ";
     $sql .= "MatKhau = '$password', ";
     $sql .= "VaiTro = '$role', ";
@@ -124,14 +136,16 @@ function updateUserAdmin($id, $username, $password, $name, $mobile_number, $imag
     $stmt->execute();
 }
 
-function updateUserProfileAdmin($id, $password, $name, $mobile_number, $image)
+function updateUserProfileAdmin($id, $firstName, $lastName, $email, $phone, $username, $password)
 {
     $conn = connect();
     $sql = "UPDATE nguoidung SET ";
-    $sql .= "MatKhau = '$password', ";
-    $sql .= "HoTen = '$name', ";
-    $sql .= "MobileNumber = '$mobile_number', ";
-    $sql .= "HinhAnh = '$image' ";
+    $sql .= "FirstName = '$firstName', ";
+    $sql .= "LastName = '$lastName', ";
+    $sql .= "Email = '$email', ";
+    $sql .= "MobileNumber = '$phone', ";
+    $sql .= "UserName = '$username', ";
+    $sql .= "MatKhau = '$password' ";
     $sql .= "WHERE id = $id ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();

@@ -32,7 +32,7 @@
                 </div>
                 <div class="sma-rb-item">
                   <label for="">Password</label>
-                  <input type="text" name="user_password"/>
+                  <input type="password" name="user_password"/>
                 </div>
                 <div class="sma-rb-item">
                     <label for="">Status</label>

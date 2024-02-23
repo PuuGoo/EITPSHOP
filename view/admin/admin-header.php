@@ -1,3 +1,11 @@
+<?php ob_start(); ?>
+<?php 
+
+    if($_SESSION['VaiTro'] !== 1) {
+      header("Location: ?mod=page&act=admin-login");
+    } 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +52,7 @@
                                                 break;   
                                               case 'userlist':
                                                 echo "productlist";
-                                                break;                                                                                                                                                                                                                                                  
+                                                break;                                                                                                                                                                                                                                                   
 
                                               default:
                                                 echo $act;
