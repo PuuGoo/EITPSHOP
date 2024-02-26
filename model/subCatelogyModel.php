@@ -16,7 +16,7 @@ function getAllSubCatelogies()
 function getSubCatelogyById($id)
 {
     $conn = connect();
-    $sql = "SELECT * FROM subcategory WHERE id = $id";
+    $sql = "SELECT * FROM subcategory WHERE id = '$id' ";
     // Chuẩn bị một câu lệnh để thực thi(query) và trả về một đối tượng(object) câu lệnh
     $stmt = $conn->prepare($sql);
     // Chuẩn bị một câu lệnh SQL để được thực thi bằng phương thức(method) execute()
@@ -39,7 +39,7 @@ function deleteSubCatelogy($id)
 {
 
     $conn = connect();
-    $sql = "DELETE FROM subcategory WHERE id = $id ";
+    $sql = "DELETE FROM subcategory WHERE id = '$id' ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 }
@@ -61,7 +61,7 @@ function updateSubCatelogy($id,$MaDanhMuc, $TenDanhMuc, $SubCategoryCode, $Descr
 function countSubCatelogies()
 {
     $conn = connect();
-    $sql = "SELECT COUNT(*) FROM danhmuc ";
+    $sql = "SELECT COUNT(*) FROM subcatelogy ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $count = $stmt->fetchColumn();

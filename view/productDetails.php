@@ -17,7 +17,7 @@
           <path d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
             stroke="#818B9C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <div class="sp-content p1-medium-16">G502 x Lightspeed Wireless Gaming Mouse</div>
+        <div class="sp-content p1-medium-16"><?= $show_prod_by_id['TenSanPham'] ?></div>
       </div>
     </div>
   </section>
@@ -41,26 +41,26 @@
             </svg>
           </div>
           <div class="spi-i-big-img">
-            <img src="assets/images/G502 X Lightspeed Mouse_01.png" alt="">
+            <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="300" height="300" alt="">
           </div>
           <div class="spi-i-small-imgs">
             <div class="spi-i-small-img">
-              <img src="assets/images/G502 X Lightspeed Mouse_02.png" alt="">
+              <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="84" height="84" alt="">
             </div>
             <div class="spi-i-small-img">
-              <img src="assets/images/G502 X Lightspeed Mouse_03.png" alt="">
+              <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="84" height="84" alt="">
             </div>
             <div class="spi-i-small-img">
-              <img src="assets/images/G502 X Lightspeed Mouse_04.png" alt="">
+              <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="84" height="84" alt="">
             </div>
             <div class="spi-i-small-img">
-              <img src="assets/images/G502 X Lightspeed Mouse_05.png" alt="">
+              <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="84" height="84" alt="">
             </div>
           </div>
         </div>
         <div class="spi-text">
           <div class="spi-t-contents">
-            <div class="spi-i-c-title eh2">G502 X Lightspeed Wireless Gaming Mouse</div>
+            <div class="spi-i-c-title eh2"><?= $show_prod_by_id['TenSanPham'] ?></div>
             <div class="spi-i-c-review">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -71,10 +71,8 @@
               <div class="spi-i-cr-divider"></div>
               <div class="stock p1-regular-16">1238 Sold</div>
             </div>
-            <div class="spi-i-c-price eh4" style="color: var(--darkGreen-03)">$139.99</div>
-            <div class="spi-i-c-content p1-regular-16" style="color: var(--grey-01)">G502 X LIGHTSPEED is the latest
-              addition to legendary G502 lineage. Featuring our first-ever LIGHTFORCE hybrid optical-mechanical switches
-              and updated LIGHTSPEED wireless protocol with 68% faster response rate.</div>
+            <div class="spi-i-c-price eh4" style="color: var(--darkGreen-03)">$<?= $show_prod_by_id['Gia'] ?></div>
+            <div class="spi-i-c-content p1-regular-16" style="color: var(--grey-01)"><?= $show_prod_by_id['MoTa'] ?></div>
             <div class="spi-i-c-divider"></div>
             <div class="spi-i-c-product-variant ">
               <div class="spi-ic-pv-heading h2">Product Variant:</div>

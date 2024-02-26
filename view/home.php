@@ -5,7 +5,7 @@
       <div class="site-banner">
         <div class="mb-text">
           <div class="mb-text-content">
-            <div class="mb-title eh1">Upgrade Your Wardrobe With Our Collection</div>
+            <div class="mb-title eh1">Upgrade Your Equipment With Our Products</div>
             <div class="mb-content p1-regular-18" style="color: var(--gr)">Eget neque aenean viverra aliquam tortor diam
               nunc. Dis pellentesque lectus quis velit fusce aenean nunc dui consectetur. Eu lorem est ullamcorper nisl
               amet non mollis.</div>
@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="main-banner-img">
-          <img src="assets/images/main banner.png" alt="">
+          <img src="assets/images/app_bg.jpg" width="800" height="689.17" alt="">
         </div>
         <button class="mb-btn-right">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,10 +35,10 @@
 
           </button>
           <div class="pc-image">
-            <img src="assets/images/Green Jacket V2.png" alt="">
+            <img src="https://m.media-amazon.com/images/I/611PsGoCJYL._SX679_.jpg" alt="">
           </div>
           <div class="pc-text">
-            <div class="pc-title h3">Green Jacket V2</div>
+            <div class="pc-title h3">Laptop's Screen</div>
             <div class="pc-content p4-regular-10">Cimahi, Bandung</div>
             <div class="pc-review">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,6 +189,55 @@
     </div>
   </section>
 
+  <section class="featured-products popular-products">
+    <div class="container">
+      <div class="site-pop-pro">
+        <div class="sp-pro-title eh2">Featured Product on EITPSHOP</div>
+        <div class="sp-pro-content p1-regular-18" style="color: var(--grey-01)">Lorem ipsum dolor sit amet consectetur.
+          Integer cursus cursus in</div>
+        <div class="products-cart-4row">
+          <?php foreach($show_fea_pros_8 as $prod): ?>
+            <a href="?mod=page&act=productDetails&prod_id=<?= $prod['id'] ?>">
+            <div class="product-cart-4row">
+            <div class="pc-4row-image">
+              <img src="assets/images/<?= $prod['HinhAnh'] ?>" alt="">
+              <button class="sp-pro-btn-heart">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.36175 12.1392C7.16341 12.2092 6.83675 12.2092 6.63841 12.1392C4.94675 11.5617 1.16675 9.15252 1.16675 5.06918C1.16675 3.26668 2.61925 1.80835 4.41008 1.80835C5.47175 1.80835 6.41091 2.32168 7.00008 3.11502C7.58925 2.32168 8.53425 1.80835 9.59008 1.80835C11.3809 1.80835 12.8334 3.26668 12.8334 5.06918C12.8334 9.15252 9.05341 11.5617 7.36175 12.1392Z"
+                    stroke="#0B0F0E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="pc-4row-text">
+              <div class="pc4r-text-title-price">
+                <div class="pc4r-text-title eh6"><?= $prod['TenSanPham'] ?></div>
+                <div class="pc4r-text-price eh6" style="color: var(--darkGreen-03)">$<?= $prod['Gia'] ?></div>
+              </div>
+              <div class="pc4r-text-content p1-regular-16" style="color: var(--grey-01)"><?= $prod['MoTa'] ?></div>
+              <div class="pc4r-text-review">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.15327 2.34013L10.3266 4.6868C10.4866 5.01347 10.9133 5.3268 11.2733 5.3868L13.3999 5.74013C14.7599 5.9668 15.0799 6.95347 14.0999 7.9268L12.4466 9.58013C12.1666 9.86013 12.0133 10.4001 12.0999 10.7868L12.5733 12.8335C12.9466 14.4535 12.0866 15.0801 10.6533 14.2335L8.65994 13.0535C8.29994 12.8401 7.70661 12.8401 7.33994 13.0535L5.34661 14.2335C3.91994 15.0801 3.05327 14.4468 3.42661 12.8335L3.89994 10.7868C3.98661 10.4001 3.83327 9.86013 3.55327 9.58013L1.89994 7.9268C0.926606 6.95347 1.23994 5.9668 2.59994 5.74013L4.72661 5.3868C5.07994 5.3268 5.50661 5.01347 5.66661 4.6868L6.83994 2.34013C7.47994 1.0668 8.51994 1.0668 9.15327 2.34013Z"
+                    fill="#FFA439" />
+                </svg>
+                <span class="p4-medium-10">4,8</span>
+                <div class="stock p4-medium-10">1238 Sold</div>
+              </div>
+            </div>
+          </div>
+            </a>
+          <?php endforeach; ?>
+        </div>
+        <div class="btn-sp-pro">
+          <div class="btn-main">
+            <button class="btn-ghost h2">Load More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="popular-products">
     <div class="container">
       <div class="site-pop-pro">
@@ -196,9 +245,11 @@
         <div class="sp-pro-content p1-regular-18" style="color: var(--grey-01)">Lorem ipsum dolor sit amet consectetur.
           Integer cursus cursus in</div>
         <div class="products-cart-4row">
+          <?php foreach($show_pros_8 as $prod): ?>
+          <a href="?mod=page&act=productDetails&prod_id=<?= $prod['id'] ?>">
           <div class="product-cart-4row">
             <div class="pc-4row-image">
-              <img src="assets/images/Spy x Family Tshirt.png" alt="">
+              <img src="assets/images/<?= $prod['HinhAnh'] ?>" alt="">
               <button class="sp-pro-btn-heart">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -209,10 +260,10 @@
             </div>
             <div class="pc-4row-text">
               <div class="pc4r-text-title-price">
-                <div class="pc4r-text-title eh6">Spy x Family Tshirt</div>
-                <div class="pc4r-text-price eh6" style="color: var(--darkGreen-03)">$26</div>
+                <div class="pc4r-text-title eh6"><?= $prod['TenSanPham'] ?></div>
+                <div class="pc4r-text-price eh6" style="color: var(--darkGreen-03)">$<?= $prod['Gia'] ?></div>
               </div>
-              <div class="pc4r-text-content p1-regular-16" style="color: var(--grey-01)">North Purwokerto</div>
+              <div class="pc4r-text-content p1-regular-16" style="color: var(--grey-01)"><?= $prod['MoTa'] ?></div>
               <div class="pc4r-text-review">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -224,209 +275,8 @@
               </div>
             </div>
           </div>
-
-          <div class="product-cart-4row">
-            <div class="pc-4row-image">
-              <img src="assets/images/Green Man Jacket.png" alt="">
-              <button class="sp-pro-btn-heart">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.36175 12.1392C7.16341 12.2092 6.83675 12.2092 6.63841 12.1392C4.94675 11.5617 1.16675 9.15252 1.16675 5.06918C1.16675 3.26668 2.61925 1.80835 4.41008 1.80835C5.47175 1.80835 6.41091 2.32168 7.00008 3.11502C7.58925 2.32168 8.53425 1.80835 9.59008 1.80835C11.3809 1.80835 12.8334 3.26668 12.8334 5.06918C12.8334 9.15252 9.05341 11.5617 7.36175 12.1392Z"
-                    stroke="#0B0F0E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-            <div class="pc-4row-text">
-              <div class="pc4r-text-title-price">
-                <div class="pc4r-text-title eh6">Green Man Jacket</div>
-                <div class="pc4r-text-price eh6" style="color: var(--darkGreen-03)">$49</div>
-              </div>
-              <div class="pc4r-text-content p1-regular-16" style="color: var(--grey-01)">North Purwokerto</div>
-              <div class="pc4r-text-review">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9.15327 2.34013L10.3266 4.6868C10.4866 5.01347 10.9133 5.3268 11.2733 5.3868L13.3999 5.74013C14.7599 5.9668 15.0799 6.95347 14.0999 7.9268L12.4466 9.58013C12.1666 9.86013 12.0133 10.4001 12.0999 10.7868L12.5733 12.8335C12.9466 14.4535 12.0866 15.0801 10.6533 14.2335L8.65994 13.0535C8.29994 12.8401 7.70661 12.8401 7.33994 13.0535L5.34661 14.2335C3.91994 15.0801 3.05327 14.4468 3.42661 12.8335L3.89994 10.7868C3.98661 10.4001 3.83327 9.86013 3.55327 9.58013L1.89994 7.9268C0.926606 6.95347 1.23994 5.9668 2.59994 5.74013L4.72661 5.3868C5.07994 5.3268 5.50661 5.01347 5.66661 4.6868L6.83994 2.34013C7.47994 1.0668 8.51994 1.0668 9.15327 2.34013Z"
-                    fill="#FFA439" />
-                </svg>
-                <span class="p4-medium-10">4,8</span>
-                <div class="stock p4-medium-10">1238 Sold</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-cart-4row">
-            <div class="pc-4row-image">
-              <img src="assets/images/Iphone 14 Pro Max.png" alt="">
-              <button class="sp-pro-btn-heart">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.36175 12.1392C7.16341 12.2092 6.83675 12.2092 6.63841 12.1392C4.94675 11.5617 1.16675 9.15252 1.16675 5.06918C1.16675 3.26668 2.61925 1.80835 4.41008 1.80835C5.47175 1.80835 6.41091 2.32168 7.00008 3.11502C7.58925 2.32168 8.53425 1.80835 9.59008 1.80835C11.3809 1.80835 12.8334 3.26668 12.8334 5.06918C12.8334 9.15252 9.05341 11.5617 7.36175 12.1392Z"
-                    stroke="#0B0F0E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-            <div class="pc-4row-text">
-              <div class="pc4r-text-title-price">
-                <div class="pc4r-text-title eh6">Iphone 14 Pro Max</div>
-                <div class="pc4r-text-price eh6" style="color: var(--darkGreen-03)">$1200</div>
-              </div>
-              <div class="pc4r-text-content p1-regular-16" style="color: var(--grey-01)">North Purwokerto</div>
-              <div class="pc4r-text-review">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9.15327 2.34013L10.3266 4.6868C10.4866 5.01347 10.9133 5.3268 11.2733 5.3868L13.3999 5.74013C14.7599 5.9668 15.0799 6.95347 14.0999 7.9268L12.4466 9.58013C12.1666 9.86013 12.0133 10.4001 12.0999 10.7868L12.5733 12.8335C12.9466 14.4535 12.0866 15.0801 10.6533 14.2335L8.65994 13.0535C8.29994 12.8401 7.70661 12.8401 7.33994 13.0535L5.34661 14.2335C3.91994 15.0801 3.05327 14.4468 3.42661 12.8335L3.89994 10.7868C3.98661 10.4001 3.83327 9.86013 3.55327 9.58013L1.89994 7.9268C0.926606 6.95347 1.23994 5.9668 2.59994 5.74013L4.72661 5.3868C5.07994 5.3268 5.50661 5.01347 5.66661 4.6868L6.83994 2.34013C7.47994 1.0668 8.51994 1.0668 9.15327 2.34013Z"
-                    fill="#FFA439" />
-                </svg>
-                <span class="p4-medium-10">4,8</span>
-                <div class="stock p4-medium-10">1238 Sold</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-cart-4row">
-            <div class="pc-4row-image">
-              <img src="assets/images/Oversized Tshirt.png" alt="">
-              <button class="sp-pro-btn-heart">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.36175 12.1392C7.16341 12.2092 6.83675 12.2092 6.63841 12.1392C4.94675 11.5617 1.16675 9.15252 1.16675 5.06918C1.16675 3.26668 2.61925 1.80835 4.41008 1.80835C5.47175 1.80835 6.41091 2.32168 7.00008 3.11502C7.58925 2.32168 8.53425 1.80835 9.59008 1.80835C11.3809 1.80835 12.8334 3.26668 12.8334 5.06918C12.8334 9.15252 9.05341 11.5617 7.36175 12.1392Z"
-                    stroke="#0B0F0E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-            <div class="pc-4row-text">
-              <div class="pc4r-text-title-price">
-                <div class="pc4r-text-title eh6">Oversized Tshirt</div>
-                <div class="pc4r-text-price eh6" style="color: var(--darkGreen-03)">$48</div>
-              </div>
-              <div class="pc4r-text-content p1-regular-16" style="color: var(--grey-01)">North Purwokerto</div>
-              <div class="pc4r-text-review">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9.15327 2.34013L10.3266 4.6868C10.4866 5.01347 10.9133 5.3268 11.2733 5.3868L13.3999 5.74013C14.7599 5.9668 15.0799 6.95347 14.0999 7.9268L12.4466 9.58013C12.1666 9.86013 12.0133 10.4001 12.0999 10.7868L12.5733 12.8335C12.9466 14.4535 12.0866 15.0801 10.6533 14.2335L8.65994 13.0535C8.29994 12.8401 7.70661 12.8401 7.33994 13.0535L5.34661 14.2335C3.91994 15.0801 3.05327 14.4468 3.42661 12.8335L3.89994 10.7868C3.98661 10.4001 3.83327 9.86013 3.55327 9.58013L1.89994 7.9268C0.926606 6.95347 1.23994 5.9668 2.59994 5.74013L4.72661 5.3868C5.07994 5.3268 5.50661 5.01347 5.66661 4.6868L6.83994 2.34013C7.47994 1.0668 8.51994 1.0668 9.15327 2.34013Z"
-                    fill="#FFA439" />
-                </svg>
-                <span class="p4-medium-10">4,8</span>
-                <div class="stock p4-medium-10">1238 Sold</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-cart-4row">
-            <div class="pc-4row-image">
-              <img src="assets/images/Brown Woman Hoodie.png" alt="">
-              <button class="sp-pro-btn-heart">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.36175 12.1392C7.16341 12.2092 6.83675 12.2092 6.63841 12.1392C4.94675 11.5617 1.16675 9.15252 1.16675 5.06918C1.16675 3.26668 2.61925 1.80835 4.41008 1.80835C5.47175 1.80835 6.41091 2.32168 7.00008 3.11502C7.58925 2.32168 8.53425 1.80835 9.59008 1.80835C11.3809 1.80835 12.8334 3.26668 12.8334 5.06918C12.8334 9.15252 9.05341 11.5617 7.36175 12.1392Z"
-                    stroke="#0B0F0E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-            <div class="pc-4row-text">
-              <div class="pc4r-text-title-price">
-                <div class="pc4r-text-title eh6">Brown Woman Hoodie</div>
-                <div class="pc4r-text-price eh6" style="color: var(--darkGreen-03)">$49</div>
-              </div>
-              <div class="pc4r-text-content p1-regular-16" style="color: var(--grey-01)">North Purwokerto</div>
-              <div class="pc4r-text-review">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9.15327 2.34013L10.3266 4.6868C10.4866 5.01347 10.9133 5.3268 11.2733 5.3868L13.3999 5.74013C14.7599 5.9668 15.0799 6.95347 14.0999 7.9268L12.4466 9.58013C12.1666 9.86013 12.0133 10.4001 12.0999 10.7868L12.5733 12.8335C12.9466 14.4535 12.0866 15.0801 10.6533 14.2335L8.65994 13.0535C8.29994 12.8401 7.70661 12.8401 7.33994 13.0535L5.34661 14.2335C3.91994 15.0801 3.05327 14.4468 3.42661 12.8335L3.89994 10.7868C3.98661 10.4001 3.83327 9.86013 3.55327 9.58013L1.89994 7.9268C0.926606 6.95347 1.23994 5.9668 2.59994 5.74013L4.72661 5.3868C5.07994 5.3268 5.50661 5.01347 5.66661 4.6868L6.83994 2.34013C7.47994 1.0668 8.51994 1.0668 9.15327 2.34013Z"
-                    fill="#FFA439" />
-                </svg>
-                <span class="p4-medium-10">4,8</span>
-                <div class="stock p4-medium-10">1238 Sold</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-cart-4row">
-            <div class="pc-4row-image">
-              <img src="assets/images/Airpod Pro 2022.png" alt="">
-              <button class="sp-pro-btn-heart">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.36175 12.1392C7.16341 12.2092 6.83675 12.2092 6.63841 12.1392C4.94675 11.5617 1.16675 9.15252 1.16675 5.06918C1.16675 3.26668 2.61925 1.80835 4.41008 1.80835C5.47175 1.80835 6.41091 2.32168 7.00008 3.11502C7.58925 2.32168 8.53425 1.80835 9.59008 1.80835C11.3809 1.80835 12.8334 3.26668 12.8334 5.06918C12.8334 9.15252 9.05341 11.5617 7.36175 12.1392Z"
-                    stroke="#0B0F0E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-            <div class="pc-4row-text">
-              <div class="pc4r-text-title-price">
-                <div class="pc4r-text-title eh6">Airpod Pro 2022</div>
-                <div class="pc4r-text-price eh6" style="color: var(--darkGreen-03)">$459</div>
-              </div>
-              <div class="pc4r-text-content p1-regular-16" style="color: var(--grey-01)">North Purwokerto</div>
-              <div class="pc4r-text-review">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9.15327 2.34013L10.3266 4.6868C10.4866 5.01347 10.9133 5.3268 11.2733 5.3868L13.3999 5.74013C14.7599 5.9668 15.0799 6.95347 14.0999 7.9268L12.4466 9.58013C12.1666 9.86013 12.0133 10.4001 12.0999 10.7868L12.5733 12.8335C12.9466 14.4535 12.0866 15.0801 10.6533 14.2335L8.65994 13.0535C8.29994 12.8401 7.70661 12.8401 7.33994 13.0535L5.34661 14.2335C3.91994 15.0801 3.05327 14.4468 3.42661 12.8335L3.89994 10.7868C3.98661 10.4001 3.83327 9.86013 3.55327 9.58013L1.89994 7.9268C0.926606 6.95347 1.23994 5.9668 2.59994 5.74013L4.72661 5.3868C5.07994 5.3268 5.50661 5.01347 5.66661 4.6868L6.83994 2.34013C7.47994 1.0668 8.51994 1.0668 9.15327 2.34013Z"
-                    fill="#FFA439" />
-                </svg>
-                <span class="p4-medium-10">4,8</span>
-                <div class="stock p4-medium-10">1238 Sold</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-cart-4row">
-            <div class="pc-4row-image">
-              <img src="assets/images/DJI Mini 3 Pro.png" alt="">
-              <button class="sp-pro-btn-heart">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.36175 12.1392C7.16341 12.2092 6.83675 12.2092 6.63841 12.1392C4.94675 11.5617 1.16675 9.15252 1.16675 5.06918C1.16675 3.26668 2.61925 1.80835 4.41008 1.80835C5.47175 1.80835 6.41091 2.32168 7.00008 3.11502C7.58925 2.32168 8.53425 1.80835 9.59008 1.80835C11.3809 1.80835 12.8334 3.26668 12.8334 5.06918C12.8334 9.15252 9.05341 11.5617 7.36175 12.1392Z"
-                    stroke="#0B0F0E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-            <div class="pc-4row-text">
-              <div class="pc4r-text-title-price">
-                <div class="pc4r-text-title eh6">DJI Mini 3 Pro</div>
-                <div class="pc4r-text-price eh6" style="color: var(--darkGreen-03)">$842</div>
-              </div>
-              <div class="pc4r-text-content p1-regular-16" style="color: var(--grey-01)">North Purwokerto</div>
-              <div class="pc4r-text-review">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9.15327 2.34013L10.3266 4.6868C10.4866 5.01347 10.9133 5.3268 11.2733 5.3868L13.3999 5.74013C14.7599 5.9668 15.0799 6.95347 14.0999 7.9268L12.4466 9.58013C12.1666 9.86013 12.0133 10.4001 12.0999 10.7868L12.5733 12.8335C12.9466 14.4535 12.0866 15.0801 10.6533 14.2335L8.65994 13.0535C8.29994 12.8401 7.70661 12.8401 7.33994 13.0535L5.34661 14.2335C3.91994 15.0801 3.05327 14.4468 3.42661 12.8335L3.89994 10.7868C3.98661 10.4001 3.83327 9.86013 3.55327 9.58013L1.89994 7.9268C0.926606 6.95347 1.23994 5.9668 2.59994 5.74013L4.72661 5.3868C5.07994 5.3268 5.50661 5.01347 5.66661 4.6868L6.83994 2.34013C7.47994 1.0668 8.51994 1.0668 9.15327 2.34013Z"
-                    fill="#FFA439" />
-                </svg>
-                <span class="p4-medium-10">4,8</span>
-                <div class="stock p4-medium-10">1238 Sold</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-cart-4row">
-            <div class="pc-4row-image">
-              <img src="assets/images/Ipad Pro Gen 3.png" alt="">
-              <button class="sp-pro-btn-heart">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.36175 12.1392C7.16341 12.2092 6.83675 12.2092 6.63841 12.1392C4.94675 11.5617 1.16675 9.15252 1.16675 5.06918C1.16675 3.26668 2.61925 1.80835 4.41008 1.80835C5.47175 1.80835 6.41091 2.32168 7.00008 3.11502C7.58925 2.32168 8.53425 1.80835 9.59008 1.80835C11.3809 1.80835 12.8334 3.26668 12.8334 5.06918C12.8334 9.15252 9.05341 11.5617 7.36175 12.1392Z"
-                    stroke="#0B0F0E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-            <div class="pc-4row-text">
-              <div class="pc4r-text-title-price">
-                <div class="pc4r-text-title eh6">Ipad Pro Gen 3</div>
-                <div class="pc4r-text-price eh6" style="color: var(--darkGreen-03)">$338</div>
-              </div>
-              <div class="pc4r-text-content p1-regular-16" style="color: var(--grey-01)">North Purwokerto</div>
-              <div class="pc4r-text-review">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9.15327 2.34013L10.3266 4.6868C10.4866 5.01347 10.9133 5.3268 11.2733 5.3868L13.3999 5.74013C14.7599 5.9668 15.0799 6.95347 14.0999 7.9268L12.4466 9.58013C12.1666 9.86013 12.0133 10.4001 12.0999 10.7868L12.5733 12.8335C12.9466 14.4535 12.0866 15.0801 10.6533 14.2335L8.65994 13.0535C8.29994 12.8401 7.70661 12.8401 7.33994 13.0535L5.34661 14.2335C3.91994 15.0801 3.05327 14.4468 3.42661 12.8335L3.89994 10.7868C3.98661 10.4001 3.83327 9.86013 3.55327 9.58013L1.89994 7.9268C0.926606 6.95347 1.23994 5.9668 2.59994 5.74013L4.72661 5.3868C5.07994 5.3268 5.50661 5.01347 5.66661 4.6868L6.83994 2.34013C7.47994 1.0668 8.51994 1.0668 9.15327 2.34013Z"
-                    fill="#FFA439" />
-                </svg>
-                <span class="p4-medium-10">4,8</span>
-                <div class="stock p4-medium-10">1238 Sold</div>
-              </div>
-            </div>
-          </div>
+            </a>
+          <?php endforeach; ?>
         </div>
         <div class="btn-sp-pro">
           <div class="btn-main">
@@ -469,41 +319,18 @@
           </div>
         </div>
         <div class="card-blogs">
+          <?php foreach($show_blogs_3 as $blog): ?>
           <div class="card-blog">
             <div class="cb-image">
-              <img src="assets/images/blog_01.png" alt="">
+              <img src="assets/images/<?= $blog['BlogImage'] ?>" alt="">
             </div>
             <div class="cb-text">
               <div class="cbt-date p1-regular-16" style="color: var(--grey-01)">22 Dec 2022</div>
-              <div class="cbt-title eh6">Make your desk more neat and beautiful</div>
-              <div class="cbt-content p1-regular-16" style="color: var(--grey-01)">Lorem ipsum dolor sit amet
-                consectetur. Arcu pellentesque etiam scelerisque pharetra id. Maecenas diam eu amet cras</div>
+              <div class="cbt-title eh6"><?= $blog['BlogTitle'] ?></div>
+              <div class="cbt-content p1-regular-16" style="color: var(--grey-01)"><?= $blog['BlogContent'] ?></div>
             </div>
           </div>
-
-          <div class="card-blog">
-            <div class="cb-image">
-              <img src="assets/images/blog_02.png" alt="">
-            </div>
-            <div class="cb-text">
-              <div class="cbt-date p1-regular-16" style="color: var(--grey-01)">22 Dec 2022</div>
-              <div class="cbt-title eh6">What are the fashion trend in 2023?</div>
-              <div class="cbt-content p1-regular-16" style="color: var(--grey-01)">Lorem ipsum dolor sit amet
-                consectetur. Arcu pellentesque etiam scelerisque pharetra id. Maecenas diam eu amet cras</div>
-            </div>
-          </div>
-
-          <div class="card-blog">
-            <div class="cb-image">
-              <img src="assets/images/blog_03.png" alt="">
-            </div>
-            <div class="cb-text">
-              <div class="cbt-date p1-regular-16" style="color: var(--grey-01)">22 Dec 2022</div>
-              <div class="cbt-title eh6">Tips for Work Life Balance </div>
-              <div class="cbt-content p1-regular-16" style="color: var(--grey-01)">Lorem ipsum dolor sit amet
-                consectetur. Arcu pellentesque etiam scelerisque pharetra id. Maecenas diam eu amet cras</div>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
 
       </div>

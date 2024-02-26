@@ -1,8 +1,10 @@
 <?php
-session_start();
+
 extract($_REQUEST);
 include_once "model/productModel.php";
 include_once "model/catelogyModel.php";
+include_once "model/subCatelogyModel.php";
+include_once "model/brandModel.php";
 
 if (isset($mod)) {
     switch ($act) {
@@ -14,6 +16,8 @@ if (isset($mod)) {
             break;
         case 'addproduct':
             $show_cats = getAllCatelogies();
+            $show_subcats = getAllSubCatelogies();
+            $show_brands = getAllBrands();
             if (isset($_POST['add_product'])) {
                 $prod_name = $_POST['prod_name'];
                 $prod_description = $_POST['prod_description'];
@@ -58,6 +62,10 @@ if (isset($mod)) {
                 $prod_catelogy_id = getProductById($prod_id)['MaDanhMuc'];
                 $show_cats = getAllCatelogies();
                 $show_prod_by_id = getProductById($prod_id);
+                $show_subcats = getAllSubCatelogies();
+                $show_brands = getAllBrands();
+                $show_subcat_by_id = getSubCatelogyById($show_prod_by_id['SubCategory']);
+                $show_brand_by_id = getBrandById($show_prod_by_id['Brand']);
                 if (isset($_POST['update_product'])) {
                     $prod_name = $_POST['prod_name'];
                     $prod_description = $_POST['prod_description'];

@@ -26,14 +26,18 @@
         <label for="">Sub Category</label>
         <select name="prod_sub_catelogy" id="" class="form-select">
           <option value="" selected>Choose Sub Category</option>
-          <option value="Laptop">Laptop</option>
+          <?php foreach($show_subcats as $subcat): ?>
+          <option value="<?= $subcat['id'] ?>"><?= $subcat['TenDanhMuc'] ?></option>
+          <?php endforeach; ?>
         </select>
       </div>
       <div class="sma-rb-item">
         <label for="">Brand</label>
         <select name="prod_brand" id="" class="form-select">
           <option value="" selected>Choose Brand</option>
-          <option value="Samsung">Samsung</option>
+          <?php foreach($show_brands as $brand): ?>
+          <option value="<?= $brand['id'] ?>"><?= $brand['BrandName'] ?></option>
+          <?php endforeach; ?>
         </select>
       </div>
       <div class="sma-rb-item">

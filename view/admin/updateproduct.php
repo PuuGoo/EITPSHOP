@@ -31,17 +31,17 @@
                     <option value="<?= $show_prod_by_id['SubCategory'] ?>" selected>
                         <?php 
                         
-                            if($show_prod_by_id['SubCategory'] !== "Choose Sub Category") {
-                                echo $show_prod_by_id['SubCategory'];
+                            if($show_subcat_by_id['TenDanhMuc'] !== "Choose Sub Category") {
+                                echo $show_subcat_by_id['TenDanhMuc'];
                             } else {
                                 echo "Choose Sub Category";
                             }
                         
                         ?>
                     </option>                    
-                    <option value="Laptop">Laptop</option>
-                    <option value="Laptop">Mobile</option>
-                    <option value="Laptop">Tablet</option>
+                    <?php foreach($show_subcats as $subcat): ?>
+                        <option value="<?= $subcat['id'] ?>"><?= $subcat['TenDanhMuc'] ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
             <div class="sma-rb-item">
@@ -50,17 +50,17 @@
                     <option value="<?= $show_prod_by_id['Brand'] ?>" selected>
                         <?php 
                         
-                            if($show_prod_by_id['Brand'] !== "Choose Brand") {
-                                echo $show_prod_by_id['Brand'];
+                            if($show_brand_by_id['BrandName'] !== "Choose Brand") {
+                                echo $show_brand_by_id['BrandName'];
                             } else {
                                 echo "Choose Brand";
                             }
                         
                         ?>
                     </option>                      
-                    <option value="Samsung">Samsung</option>
-                    <option value="Samsung">Apple</option>
-                    <option value="Samsung">LG</option>
+                    <?php foreach($show_brands as $brand): ?>
+                        <option value="<?= $brand['id'] ?>"><?= $brand['BrandName'] ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
             <div class="sma-rb-item">

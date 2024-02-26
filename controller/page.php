@@ -1,6 +1,9 @@
 <?php
-session_start();
+
+
 include_once "model/catelogyModel.php";
+include_once "model/productModel.php";
+include_once "model/blogModel.php";
 include_once "model/userModel.php";
 
 $show_cats = getAllCatelogies();
@@ -18,11 +21,15 @@ if (!isset($_SESSION['id'])) {
     $_SESSION['Status'] = null;
     $_SESSION['HinhAnh'] = null;
     $_SESSION['MobileNumber'] = null;
+    $_SESSION['CheckLogin'] = null;
 }
 extract($_REQUEST);
 if (isset($act)) {
     switch ($act) {
         case 'home':
+            $show_pros_8 = getAllProductsLimit(8);
+            $show_fea_pros_8 = getFeaturedProductsLimit(8);
+            $show_blogs_3 = getAllBlogsLimit(3);
             if (isset($_POST['sign-in'])) {
                 $username = strtolower($_POST['username']);
                 $password = $_POST['password'];
@@ -65,11 +72,16 @@ if (isset($act)) {
             include_once "view/footer.php";
             break;
         case 'shop':
+            $show_pros_12 = getAllProductsLimit(12);
             include_once "view/header.php";
             include_once "view/shop.php";
             include_once "view/footer.php";
             break;
         case 'productDetails':
+            if(isset($_GET['prod_id'])) {
+                $prod_id = $_GET['prod_id'];
+                $show_prod_by_id = getProductById($prod_id);
+            }
             include_once "view/header.php";
             include_once "view/productDetails.php";
             include_once "view/footer.php";
@@ -127,7 +139,11 @@ if (isset($act)) {
                     $_SESSION['HinhAnh'] = $checklogin['HinhAnh'];
                     $_SESSION['MobileNumber'] = $checklogin['MobileNumber'];
                     $_SESSION['MatKhau'] = $checklogin['MatKhau'];
-                     header("Location: ?mod=page&act=admin");
+
+                    $_SESSION['CheckLogin'] = 1;
+
+
+                    header("Location: ?mod=page&act=admin");
                     echo "<script type='text/javascript'>alert('Login Successfully!');</script>";
                    
                 } else {

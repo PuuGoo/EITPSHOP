@@ -1,12 +1,5 @@
-<?php ob_start(); ?>
 
-<?php 
 
-if ($_SESSION['VaiTro'] === 1) {
-  header("Location: ?mod=page&act=admin");
-}
-
-?>
 
 
 <!DOCTYPE html>
@@ -17,14 +10,14 @@ if ($_SESSION['VaiTro'] === 1) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <!-- Link use for icons by https://iconscout.com/unicons -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css?v=<?php echo time(); ?>" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
   <!-- By using boostrap v5.0.1 -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=<?php echo time(); ?>" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <!-- For swiper slider by using https://swiperjs.com -->
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css?v=<?php echo time(); ?>" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
   <!-- For fancy box by using jquery.fancybox.min.css -->
-  <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css?v=<?php echo time(); ?>" />
+  <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
   <!-- For custom css -->
   <link rel="stylesheet" href="assets/css/global.css?v=<?php echo time(); ?>" />
   <link rel="stylesheet" href="assets/css/admin-login.css?v=<?php echo time(); ?>" />

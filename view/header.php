@@ -1,5 +1,5 @@
 <?php
-ob_start();
+
 if (isset($_GET['method'])) {
   if ($_GET['method'] === "logout") {
     session_destroy();

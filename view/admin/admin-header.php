@@ -1,4 +1,4 @@
-<?php ob_start(); ?>
+
 <?php
 
 if ($_SESSION['VaiTro'] !== 1) {

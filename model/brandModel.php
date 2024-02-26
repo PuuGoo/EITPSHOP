@@ -57,10 +57,10 @@ function updateBrand($id, $BrandName, $BrandDescription, $BrandImage)
     $stmt->execute();
 }
 
-function countCatelogies()
+function countBrand()
 {
     $conn = connect();
-    $sql = "SELECT COUNT(*) FROM danhmuc ";
+    $sql = "SELECT COUNT(*) FROM brand ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $count = $stmt->fetchColumn();
