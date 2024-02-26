@@ -22,7 +22,8 @@
     </div>
   </section>
 
-  <section class="product-information">
+<form action="" method="post">
+    <section class="product-information">
     <div class="container">
       <div class="site-product-information">
         <div class="spi-images">
@@ -79,25 +80,23 @@
               <div class="spi-ic-pv">
                 <div class="spi-ic-pv-title p1-regular-16">Type</div>
                 <div class="spi-ic-pv-options">
-                  <div class="spi-ic-pv-to-title p2-medium-14">Wireless</div>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M9.96004 4.47498L6.70004 7.73498C6.31504 8.11998 5.68504 8.11998 5.30004 7.73498L2.04004 4.47498"
-                      stroke="#0B0F0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
+<select class="form-select" aria-label="Default select example" name="cart_type">
+  <option value="S" selected>Choose Type</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+</select>
                 </div>
               </div>
               <div class="spi-ic-pv">
                 <div class="spi-ic-pv-title p1-regular-16">Color</div>
                 <div class="spi-ic-pv-options">
-                  <div class="spi-ic-pv-co-title p2-medium-14">Black</div>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M9.96004 4.47498L6.70004 7.73498C6.31504 8.11998 5.68504 8.11998 5.30004 7.73498L2.04004 4.47498"
-                      stroke="#0B0F0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
+<select class="form-select" aria-label="Default select example" name="cart_color">
+  <option value="Black" selected>Choose Color</option>
+  <option value="Black">Black</option>
+  <option value="Red">Red</option>
+  <option value="White">White</option>
+</select>
                 </div>
               </div>
             </div>
@@ -105,7 +104,7 @@
           <div class="btn-main">
             <button class="btn-general h2">Buy Now</button>
             <a href="?mod=page&act=cart">
-              <button class="btn-wIcon h2" style="color: var(--darkGreen-01)">
+              <button class="btn-wIcon h2" style="color: var(--darkGreen-01)" type="submit" name="addToCart">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M2.5 2.5H4.24001C5.32001 2.5 6.17 3.43 6.08 4.5L5.25 14.46C5.11 16.09 6.39999 17.49 8.03999 17.49H18.69C20.13 17.49 21.39 16.31 21.5 14.88L22.04 7.38C22.16 5.72 20.9 4.37 19.23 4.37H6.32001"
@@ -130,6 +129,8 @@
       </div>
     </div>
   </section>
+</form>
+
 
   <section class="product-description">
     <div class="container">

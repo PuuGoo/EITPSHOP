@@ -29,33 +29,39 @@
         <div class="container">
             <div class="site-main-cart">
                 <div class="smc-left">
+
+                <form action="" method="post">
+                    <?php foreach($showBrandId as $brandId): ?>
+                        <?php $show_brand = getBrandById($brandId['Brand_id']) ?>
                     <div class="smc-l-items">
                         <div class="smc-li-logo">
                             <div class="smc-li-l-img">
-                                <img src="assets/images/Logitech Indonesia.png" alt="">
+                                <img src="assets/images/<?= $show_brand['BrandImage'] ?>" alt="">
                             </div>
                             <div class="smc-li-l-text">
-                                <div class="smc-li-lt-title eh">Logitech Indonesia</div>
+                                <div class="smc-li-lt-title eh"><?= $show_brand['BrandName'] ?></div>
                                 <div class="smc-li-lt-content p2-regular-14">Central Jakarta</div>
                             </div>
                         </div>
                         <div class="smc-li-lists">
+                            <?php foreach(showAllCartsByBrandId($brandId['Brand_id']) as $prod): ?>
+                                <?php $show_prod = getProductById($prod['SanPham_id']) ?>
                             <div class="smc-li-l-item">
                                 <div class="smc-li-li-left">
-                                    <div class="option">
-                                        <input type="checkbox" name="" id="checkbox">
-                                        <label for="checkbox"></label>
+                                    <div class="smc-li-li-l-cart option">
+                                        <input type="checkbox" name="cart-checkbox" id="checkbox<?= $show_prod['id'] ?>" value="<?= $show_prod['Gia'] ?>">
+                                        <label for="checkbox<?= $show_prod['id'] ?>"></label>
                                     </div>
                                     <div class="smc-li-li-l-product">
                                         <div class="smc-li-li-lp-img">
-                                            <img src="assets/images/Logitech G435 Gaming Headset.png" alt="">
+                                            <img src="assets/images/<?= $show_prod['HinhAnh'] ?>" width="100" height="100" alt="">
                                         </div>
                                         <div class="smc-li-li-lp-text">
-                                            <div class="smc-li-li-lp-t-title eh6">Logitech G435 Gaming Headset</div>
+                                            <div class="smc-li-li-lp-t-title eh6"><?= $show_prod['TenSanPham'] ?></div>
                                             <div class="smc-li-li-lp-t-content p1-regular-16"
                                                 style="color: var(--grey-01);">Central Jakarta</div>
                                             <div class="smc-li-li-lp-t-price eh6" style="color: var(--darkGreen-03);">
-                                                $280</div>
+                                                $<?= $show_prod['Gia'] ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -65,7 +71,8 @@
                                         <input type="number" value="1" class="number">
                                         <button class="add">+</button>
                                     </div>
-                                    <div class="smc-li-li-r-btn-delete">
+<a href="?mod=page&act=cart&method=delete&cart_id=<?= $prod['id'] ?>">
+                                        <div class="smc-li-li-r-btn-delete">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -87,173 +94,15 @@
                                         </svg>
 
                                     </div>
+</a>
                                 </div>
                             </div>
                             <div class="smc-li-li-divider"></div>
-                            <div class="smc-li-l-item">
-                                <div class="smc-li-li-left">
-                                    <div class="option">
-                                        <input type="checkbox" name="" id="checkbox">
-                                        <label for="checkbox"></label>
-                                    </div>
-                                    <div class="smc-li-li-l-product">
-                                        <div class="smc-li-li-lp-img">
-                                            <img src="assets/images/Logitech Gaming Mouse G502 Hero.png" alt="">
-                                        </div>
-                                        <div class="smc-li-li-lp-text">
-                                            <div class="smc-li-li-lp-t-title eh6">Logitech G502 Hero</div>
-                                            <div class="smc-li-li-lp-t-content p1-regular-16"
-                                                style="color: var(--grey-01);">Central Jakarta</div>
-                                            <div class="smc-li-li-lp-t-price eh6" style="color: var(--darkGreen-03);">
-                                                $89</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="smc-li-li-right">
-                                    <div class="smc-li-li-r-quantity">
-                                        <button class="sub">-</button>
-                                        <input type="number" value="1" class="number">
-                                        <button class="add">+</button>
-                                    </div>
-                                    <div class="smc-li-li-r-btn-delete">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998"
-                                                stroke="#0B0F0E" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
-                                                stroke="#0B0F0E" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M18.8504 9.14001L18.2004 19.21C18.0904 20.78 18.0004 22 15.2104 22H8.79039C6.00039 22 5.91039 20.78 5.80039 19.21L5.15039 9.14001"
-                                                stroke="#0B0F0E" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M10.3301 16.5H13.6601" stroke="#0B0F0E" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M9.5 12.5H14.5" stroke="#0B0F0E" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="smc-li-li-divider"></div>
-                            <div class="smc-li-l-item">
-                                <div class="smc-li-li-left">
-                                    <div class="option">
-                                        <input type="checkbox" name="" id="checkbox">
-                                        <label for="checkbox"></label>
-                                    </div>
-                                    <div class="smc-li-li-l-product">
-                                        <div class="smc-li-li-lp-img">
-                                            <img src="assets/images/Logitech G303 Shroud Edition.png" alt="">
-                                        </div>
-                                        <div class="smc-li-li-lp-text">
-                                            <div class="smc-li-li-lp-t-title eh6">Logitech G303 Shroud Edition</div>
-                                            <div class="smc-li-li-lp-t-content p1-regular-16"
-                                                style="color: var(--grey-01);">Central Jakarta</div>
-                                            <div class="smc-li-li-lp-t-price eh6" style="color: var(--darkGreen-03);">
-                                                $46</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="smc-li-li-right">
-                                    <div class="smc-li-li-r-quantity">
-                                        <button class="sub">-</button>
-                                        <input type="number" value="1" class="number">
-                                        <button class="add">+</button>
-                                    </div>
-                                    <div class="smc-li-li-r-btn-delete">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998"
-                                                stroke="#0B0F0E" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
-                                                stroke="#0B0F0E" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M18.8504 9.14001L18.2004 19.21C18.0904 20.78 18.0004 22 15.2104 22H8.79039C6.00039 22 5.91039 20.78 5.80039 19.21L5.15039 9.14001"
-                                                stroke="#0B0F0E" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M10.3301 16.5H13.6601" stroke="#0B0F0E" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M9.5 12.5H14.5" stroke="#0B0F0E" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-
-                                    </div>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
-
-                    <div class="smc-l-items">
-                        <div class="smc-li-logo">
-                            <div class="smc-li-l-img">
-                                <img src="assets/images/Uniqlo.png" alt="">
-                            </div>
-                            <div class="smc-li-l-text">
-                                <div class="smc-li-lt-title eh">Uniqlo</div>
-                                <div class="smc-li-lt-content p2-regular-14">Central Jakarta</div>
-                            </div>
-                        </div>
-                        <div class="smc-li-lists">
-                            <div class="smc-li-l-item">
-                                <div class="smc-li-li-left">
-                                    <div class="option">
-                                        <input type="checkbox" name="" id="checkbox">
-                                        <label for="checkbox"></label>
-                                    </div>
-                                    <div class="smc-li-li-l-product">
-                                        <div class="smc-li-li-lp-img">
-                                            <img src="assets/images/Green Man Jacket.png" alt="">
-                                        </div>
-                                        <div class="smc-li-li-lp-text">
-                                            <div class="smc-li-li-lp-t-title eh6">Green Man Jacket</div>
-                                            <div class="smc-li-li-lp-t-content p1-regular-16"
-                                                style="color: var(--grey-01);">Central Jakarta</div>
-                                            <div class="smc-li-li-lp-t-price eh6" style="color: var(--darkGreen-03);">
-                                                $49</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="smc-li-li-right">
-                                    <div class="smc-li-li-r-quantity">
-                                        <button class="sub">-</button>
-                                        <input type="number" value="1" class="number">
-                                        <button class="add">+</button>
-                                    </div>
-                                    <div class="smc-li-li-r-btn-delete">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998"
-                                                stroke="#0B0F0E" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
-                                                stroke="#0B0F0E" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M18.8504 9.14001L18.2004 19.21C18.0904 20.78 18.0004 22 15.2104 22H8.79039C6.00039 22 5.91039 20.78 5.80039 19.21L5.15039 9.14001"
-                                                stroke="#0B0F0E" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M10.3301 16.5H13.6601" stroke="#0B0F0E" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M9.5 12.5H14.5" stroke="#0B0F0E" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
+</form>
                 </div>
                 <div class="smc-right">
                     <div class="smc-r-heading eh6">Product Summary</div>

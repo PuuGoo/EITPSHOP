@@ -5,6 +5,8 @@ include_once "model/catelogyModel.php";
 include_once "model/productModel.php";
 include_once "model/blogModel.php";
 include_once "model/userModel.php";
+include_once "model/cartModel.php";
+include_once "model/brandModel.php";
 
 $show_cats = getAllCatelogies();
 if (!isset($mes)) {
@@ -81,12 +83,32 @@ if (isset($act)) {
             if(isset($_GET['prod_id'])) {
                 $prod_id = $_GET['prod_id'];
                 $show_prod_by_id = getProductById($prod_id);
+                if(isset($_POST['addToCart'])) {
+                $NguoiDung_id = $_SESSION['id'];
+                $SoLuong = 1;
+                $PhienBan = $_POST['cart_type'];
+                $MauSac = $_POST['cart_color'];
+                $Tong = $show_prod_by_id['Gia'];
+                addCart($prod_id, $NguoiDung_id, $show_prod_by_id['Brand'], $SoLuong, $PhienBan, $MauSac, $Tong);
+                echo "<script>alert('Add To Cart Successfully!')</script>";
             }
+            }
+
             include_once "view/header.php";
             include_once "view/productDetails.php";
             include_once "view/footer.php";
             break;
         case 'cart':
+            $showBrandId = showBrandId();
+            if(isset($_GET['method'])) {
+                if($_GET['method'] === "delete") {
+                    if(isset($_GET['cart_id'])) {
+                        $cart_id = $_GET['cart_id'];
+                        deleteCart($cart_id);
+                        header("Location: ?mod=page&act=cart");
+                    }
+                }
+            }
             include_once "view/header.php";
             include_once "view/cart.php";
             include_once "view/footer.php";

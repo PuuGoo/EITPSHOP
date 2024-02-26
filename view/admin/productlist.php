@@ -84,7 +84,7 @@
       <?php foreach ($show_prods as $prod) : ?>
         <tbody class="sma-rb-b-ite ms">
           <tr class="sma-rb-b-item">
-            <td>
+            <td class="sma-rb-bi-option">
               <div class="option">
                 <input type="checkbox" name="" id="checkbox" />
                 <label for="checkbox"></label>
@@ -104,7 +104,6 @@
             <td class="sma-rb-bi qty"><div><?= $prod['Qty'] ?></div></td>
             <td class="sma-rb-bi create"><div>Admin</div></td>
             <td class="sma-rb-bi action">
-              <div>
               <div class="sma-rb-bi-show">
                 <i class="uil uil-eye"></i>
               </div>
@@ -118,7 +117,6 @@
                   <i class="uil uil-trash-alt"></i>
                 </div>
               </a>
-              </div>
             </td>
           </tr>
         </tbody>

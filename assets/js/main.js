@@ -78,12 +78,21 @@ $(document).ready(function () {
   $(".sma-rb-item label").toggleClass("eh6");
 
   // Home -> Secondary-Navigation
-  $(".sa-m-shop").hover(function() {
+  $(".sa-m-shop").hover(function () {
     $(".sa-m-content").toggleClass("show");
-  })
+  });
 
   // // Login don't reset page
   // $(".ssi-form").on("submit", function(e) {
   //   e.preventDefault();
   // })
+$("input[type=checkbox]").click(function () {
+  total = 0;
+  $("input[type=checkbox]:checked").each(function () {
+    total = total + parseInt($(this).val());
+  });
+
+  $(".smc-rt-t-price").text("$" + total);
+});
+
 });

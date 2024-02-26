@@ -28,6 +28,15 @@
             <div class="sma-rb-item">
                 <label for="">Sub Category</label>
                 <select name="prod_sub_catelogy" id="" class="form-select">
+<<<<<<< HEAD
+                    <?php foreach ($show_cats as $cat) : ?>
+                        <?php if ($cat['id'] === $prod_catelogy_id) : ?>
+                            <option value="<?= $cat['id'] ?>" selected><?= $cat['TenDanhMuc'] ?></option>
+                        <?php else : ?>
+                            <option value="<?= $cat['id'] ?>"><?= $cat['TenDanhMuc'] ?></option>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+=======
                     <option value="<?= $show_prod_by_id['SubCategory'] ?>" selected>
                         <?php 
                         
@@ -42,6 +51,7 @@
                     <?php foreach($show_subcats as $subcat): ?>
                         <option value="<?= $subcat['id'] ?>"><?= $subcat['TenDanhMuc'] ?></option>
                     <?php endforeach; ?>
+>>>>>>> c9fb5315bb34ff561f5fc75bfab01f22aad28e64
                 </select>
             </div>
             <div class="sma-rb-item">
@@ -66,18 +76,7 @@
             <div class="sma-rb-item">
                 <label for="">Unit</label>
                 <select name="prod_unit" id="" class="form-select">
-                    <option value="<?= $show_prod_by_id['Unit'] ?>" selected>
-                        <?php 
-                        
-                            if($show_prod_by_id['Unit'] !== "Choose Unit") {
-                                echo $show_prod_by_id['Unit'];
-                            } else {
-                                echo "Choose Unit";
-                            }
-                        
-                        ?>
-                    </option>
-                    <option value="PCS">PCS</option>
+                    <option></option>
                 </select>
             </div>
             <div class="sma-rb-item">
@@ -94,40 +93,20 @@
             </div>
             <div class="sma-rb-item form-floating">
                 <label for="floatingTextarea2" style="position: relative; padding: 0">Description</label>
-                <textarea name="prod_description" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"><?= $show_prod_by_id['MoTa'] ?></textarea>
+                <textarea name="prod_description" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" value="<?= $show_prod_by_id['MoTa'] ?>"></textarea>
             </div>
             <div class="sma-rb-item">
                 <label for="">Tax</label>
                 <select name="prod_tax" id="" class="form-select">
-                    <option value="<?= $show_prod_by_id['Tax'] ?>" selected>
-                        <?php 
-                        
-                            if($show_prod_by_id['Unit'] !== "Choose Tax") {
-                                echo $show_prod_by_id['Tax'] . "%";
-                            } else {
-                                echo "Choose Tax";
-                            }
-                        
-                        ?>
-                    </option>
+                    <option value="" selected>Choose Tax</option>
                     <option value="10">10%</option>
                 </select>
             </div>
             <div class="sma-rb-item">
                 <label for="">Discount Type</label>
                 <select name="prod_discount_type" id="" class="form-select">
-                    <option value="<?= $show_prod_by_id['LoaiGiamGia'] ?>" selected>
-                        <?php 
-                        
-                            if($show_prod_by_id['LoaiGiamGia'] !== "Choose Percentage") {
-                                echo $show_prod_by_id['LoaiGiamGia'] . "%";
-                            } else {
-                                echo "Choose Percentage";
-                            }
-                        
-                        ?>
-                    </option>
-                    <option value="10">10%</option>
+                    <option value="" selected>Percentage</option>
+                    <option value="Computer">10%</option>
                 </select>
             </div>
             <div class="sma-rb-item">
@@ -137,23 +116,12 @@
             <div class="sma-rb-item">
                 <label for="">Status</label>
                 <select name="prod_status" id="" class="form-select">
-                    <option value="<?= $show_prod_by_id['Status'] ?>" selected>
-                        <?php 
-                        
-                            if($show_prod_by_id['Status'] !== "Choose Status") {
-                                echo $show_prod_by_id['Status'];
-                            } else {
-                                echo "Choose Status";
-                            }
-                        
-                        ?>
-                    </option>
-                    <option value="Closed">Closed</option>
-                    <option value="Opened">Opened</option>
+                    <option value="" selected>Closed</option>
+                    <option value="Computer">Opened</option>
                 </select>
             </div>
             <div class="sma-rb-item">
-            <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="240" height="240" alt="" style="margin-bottom: 16px;">
+                <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="40" height="40" alt="">
                 <label for="insert-img">
                     <i class="uil uil-cloud-upload"></i>
                     <div class="sma-rb-i-title">
@@ -165,7 +133,7 @@
             <div class="sma-r-end">
                 <div class="btn-main">
                     <button class="btn-general" type="submit" name="update_product">Submit</button>
-                    <button class="btn-ghost" type="submit" name="cancel">Cancel</button>
+                    <button class="btn-ghost">Cancel</button>
                 </div>
             </div>
         </form>

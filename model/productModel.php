@@ -15,6 +15,18 @@ function getAllProducts()
     return $data;
 }
 
+function getAllProductsByBrand($brand)
+{
+    $conn = connect();
+    $sql = "SELECT * FROM sanpham ORDER BY id desc WHERE Brand = $brand ";
+    // Chuẩn bị một câu lệnh để thực thi(query) và trả về một đối tượng(object) câu lệnh
+    $stmt = $conn->prepare($sql);
+    // Chuẩn bị một câu lệnh SQL để được thực thi bằng phương thức(method) execute()
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $data;
+}
+
 function getAllProductsLimit($limit)
 {
     $conn = connect();

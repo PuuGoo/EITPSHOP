@@ -111,7 +111,7 @@
 .spi-ic-pv-title {
   margin-bottom: 8px;
 }
-.spi-ic-pv-options {
+/* .spi-ic-pv-options {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -120,7 +120,7 @@
   padding: 11px 16px;
   border-radius: 8px;
   border: 1px solid var(--dGrey-01);
-}
+} */
 .btn-general {
   width: 260px !important;
 }
