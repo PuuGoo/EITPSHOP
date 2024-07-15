@@ -17,12 +17,13 @@
           <path d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
             stroke="#818B9C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <div class="sp-content p1-medium-16">G502 x Lightspeed Wireless Gaming Mouse</div>
+        <div class="sp-content p1-medium-16"><?= $show_prod_by_id['TenSanPham'] ?></div>
       </div>
     </div>
   </section>
 
-  <section class="product-information">
+<form action="" method="post">
+    <section class="product-information">
     <div class="container">
       <div class="site-product-information">
         <div class="spi-images">
@@ -41,26 +42,26 @@
             </svg>
           </div>
           <div class="spi-i-big-img">
-            <img src="assets/images/G502 X Lightspeed Mouse_01.png" alt="">
+            <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="300" height="300" alt="">
           </div>
           <div class="spi-i-small-imgs">
             <div class="spi-i-small-img">
-              <img src="assets/images/G502 X Lightspeed Mouse_02.png" alt="">
+              <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="84" height="84" alt="">
             </div>
             <div class="spi-i-small-img">
-              <img src="assets/images/G502 X Lightspeed Mouse_03.png" alt="">
+              <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="84" height="84" alt="">
             </div>
             <div class="spi-i-small-img">
-              <img src="assets/images/G502 X Lightspeed Mouse_04.png" alt="">
+              <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="84" height="84" alt="">
             </div>
             <div class="spi-i-small-img">
-              <img src="assets/images/G502 X Lightspeed Mouse_05.png" alt="">
+              <img src="assets/images/<?= $show_prod_by_id['HinhAnh'] ?>" width="84" height="84" alt="">
             </div>
           </div>
         </div>
         <div class="spi-text">
           <div class="spi-t-contents">
-            <div class="spi-i-c-title eh2">G502 X Lightspeed Wireless Gaming Mouse</div>
+            <div class="spi-i-c-title eh2"><?= $show_prod_by_id['TenSanPham'] ?></div>
             <div class="spi-i-c-review">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -71,35 +72,31 @@
               <div class="spi-i-cr-divider"></div>
               <div class="stock p1-regular-16">1238 Sold</div>
             </div>
-            <div class="spi-i-c-price eh4" style="color: var(--darkGreen-03)">$139.99</div>
-            <div class="spi-i-c-content p1-regular-16" style="color: var(--grey-01)">G502 X LIGHTSPEED is the latest
-              addition to legendary G502 lineage. Featuring our first-ever LIGHTFORCE hybrid optical-mechanical switches
-              and updated LIGHTSPEED wireless protocol with 68% faster response rate.</div>
+            <div class="spi-i-c-price eh4" style="color: var(--darkGreen-03)">$<?= $show_prod_by_id['Gia'] ?></div>
+            <div class="spi-i-c-content p1-regular-16" style="color: var(--grey-01)"><?= $show_prod_by_id['MoTa'] ?></div>
             <div class="spi-i-c-divider"></div>
             <div class="spi-i-c-product-variant ">
               <div class="spi-ic-pv-heading h2">Product Variant:</div>
               <div class="spi-ic-pv">
                 <div class="spi-ic-pv-title p1-regular-16">Type</div>
                 <div class="spi-ic-pv-options">
-                  <div class="spi-ic-pv-to-title p2-medium-14">Wireless</div>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M9.96004 4.47498L6.70004 7.73498C6.31504 8.11998 5.68504 8.11998 5.30004 7.73498L2.04004 4.47498"
-                      stroke="#0B0F0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
+<select class="form-select" aria-label="Default select example" name="cart_type">
+  <option value="S" selected>Choose Type</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+</select>
                 </div>
               </div>
               <div class="spi-ic-pv">
                 <div class="spi-ic-pv-title p1-regular-16">Color</div>
                 <div class="spi-ic-pv-options">
-                  <div class="spi-ic-pv-co-title p2-medium-14">Black</div>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M9.96004 4.47498L6.70004 7.73498C6.31504 8.11998 5.68504 8.11998 5.30004 7.73498L2.04004 4.47498"
-                      stroke="#0B0F0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
+<select class="form-select" aria-label="Default select example" name="cart_color">
+  <option value="Black" selected>Choose Color</option>
+  <option value="Black">Black</option>
+  <option value="Red">Red</option>
+  <option value="White">White</option>
+</select>
                 </div>
               </div>
             </div>
@@ -107,7 +104,7 @@
           <div class="btn-main">
             <button class="btn-general h2">Buy Now</button>
             <a href="?mod=page&act=cart">
-              <button class="btn-wIcon h2" style="color: var(--darkGreen-01)">
+              <button class="btn-wIcon h2" style="color: var(--darkGreen-01)" type="submit" name="addToCart">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M2.5 2.5H4.24001C5.32001 2.5 6.17 3.43 6.08 4.5L5.25 14.46C5.11 16.09 6.39999 17.49 8.03999 17.49H18.69C20.13 17.49 21.39 16.31 21.5 14.88L22.04 7.38C22.16 5.72 20.9 4.37 19.23 4.37H6.32001"
@@ -132,6 +129,8 @@
       </div>
     </div>
   </section>
+</form>
+
 
   <section class="product-description">
     <div class="container">
@@ -237,7 +236,7 @@
             <div class="spd-icr-content p1-regular-16" style="color: var(--grey-01)">- USB port</div>
             <div class="spd-icr-content p1-regular-16" style="color: var(--grey-01)">- Internet access for optional
               software download</div>
-            <div class="spd-icr-content p1-regular-16" style="color: var(--grey-01)">- Windows¬Æ 10 or later</div>
+            <div class="spd-icr-content p1-regular-16" style="color: var(--grey-01)">- Windowsè¢Ó 10 or later</div>
             <div class="spd-icr-content p1-regular-16" style="color: var(--grey-01)">- macOS 10.14 or later</div>
           </div>
         </div>

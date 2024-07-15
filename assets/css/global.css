@@ -514,8 +514,16 @@ ul {
   margin-bottom: 16px;
   position: relative;
 }
+.popular-products a:nth-child(4), .popular-products a:nth-child(8) {
+    margin-right: -24px;
+}
+.featured-products a:nth-child(4),
+.featured-products a:nth-child(8){
+  margin-right: -24px;
+}
 .pc-4row-image img {
   padding: 50px 51px;
+  mix-blend-mode: multiply;
 }
 .pc-4row-text {
   width: 100%;
@@ -591,6 +599,7 @@ ul {
 }
 .pc-3row-image img {
   padding: 50px 51px;
+  mix-blend-mode: multiply;
 }
 .pc-3row-text {
   width: 100%;

@@ -24,10 +24,10 @@
 
 .main-banner-img {
   position: absolute;
-  width: 827px;
+  width: 722px !important;
   height: 620px;
   top: 0;
-  left: 613px;
+  left: 716px;
   z-index: 0;
 }
 .mb-btn-right {
@@ -49,8 +49,8 @@
   border-radius: 8px;
   background: var(--white);
   position: absolute;
-  top: 197px;
-  right: 403px;
+  top: 266px;
+  right: 365px;
 }
 .pc-image {
   background: var(--lGrey-01);
@@ -64,6 +64,7 @@
 .pc-image img {
   width: 120px;
   height: 120px;
+  mix-blend-mode: multiply;
 }
 .pc-text {
   padding: 10px 27px 10px 10px;
@@ -106,8 +107,8 @@
 }
 .divider-dot {
   position: absolute;
-  top: 171px;
-  right: 477px;
+  top: 239px;
+  right: 435px;
 }
 .divider-dot .dd {
   width: 2px;
@@ -123,8 +124,8 @@
   background: var(--white);
   opacity: 0.25;
   position: absolute;
-  top: 125px;
-  right: 457px;
+  top: 195px;
+  right: 416px;
 }
 .circle-child {
   width: 16px;
@@ -132,8 +133,8 @@
   background: var(--white);
   border-radius: 50%;
   position: absolute;
-  top: 138px;
-  right: 470px;
+  top: 207px;
+  right: 429px;
 }
 /* Featured Categories */
 .fea-categories {

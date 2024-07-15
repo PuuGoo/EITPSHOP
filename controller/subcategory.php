@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 extract($_REQUEST);
 include_once "model/subCatelogyModel.php";
 include_once "model/catelogyModel.php";

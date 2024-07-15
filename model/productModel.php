@@ -15,6 +15,32 @@ function getAllProducts()
     return $data;
 }
 
+function getAllProductsByBrand($brand)
+{
+    $conn = connect();
+    $sql = "SELECT * FROM sanpham ORDER BY id desc WHERE Brand = $brand ";
+    // Chuẩn bị một câu lệnh để thực thi(query) và trả về một đối tượng(object) câu lệnh
+    $stmt = $conn->prepare($sql);
+    // Chuẩn bị một câu lệnh SQL để được thực thi bằng phương thức(method) execute()
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $data;
+}
+
+function getAllProductsLimit($limit)
+{
+    $conn = connect();
+    $sql = "SELECT * FROM sanpham ORDER BY id desc LIMIT $limit";
+    // Chuẩn bị một câu lệnh để thực thi(query) và trả về một đối tượng(object) câu lệnh
+    $stmt = $conn->prepare($sql);
+    // Chuẩn bị một câu lệnh SQL để được thực thi bằng phương thức(method) execute()
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $data;
+}
+
+
+
 function getAllProductsAZ()
 {
     $conn = connect();
@@ -103,6 +129,16 @@ function getFeaturedProducts()
 {
     $conn = connect();
     $sql = "SELECT * FROM sanpham WHERE NoiBat = '1' ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $data;
+}
+
+function getFeaturedProductsLimit($limit)
+{
+    $conn = connect();
+    $sql = "SELECT * FROM sanpham WHERE NoiBat = '1' LIMIT $limit ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -1,5 +1,5 @@
 <?php
-ob_start();
+
 if (isset($_GET['method'])) {
   if ($_GET['method'] === "logout") {
     session_destroy();
@@ -111,7 +111,7 @@ if (isset($_GET['act'])) {
             </form>
           </div>
           <div class="header-right">
-            <a href="cart.html" class="header-btn header-cart">
+            <a href="?mod=page&act=cart" class="header-btn header-cart">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 14H15.74C16.82 14 17.67 14.93 17.58 16L16.75 25.96C16.61 27.59 17.9 28.99 19.54 28.99H30.19C31.63 28.99 32.89 27.81 33 26.38L33.54 18.88C33.66 17.22 32.4 15.87 30.73 15.87H17.82" fill="#818B9C" />
                 <path d="M14 14H15.74C16.82 14 17.67 14.93 17.58 16L16.75 25.96C16.61 27.59 17.9 28.99 19.54 28.99H30.19C31.63 28.99 32.89 27.81 33 26.38L33.54 18.88C33.66 17.22 32.4 15.87 30.73 15.87H17.82" stroke="#818B9C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />

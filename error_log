@@ -112,3 +112,592 @@ Stack trace:
 [23-Feb-2024 08:54:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/eitpshop/public_html/trangchinh/eitpshop/controller/page.php:130) in /home/eitpshop/public_html/trangchinh/eitpshop/controller/page.php on line 131
 [23-Feb-2024 08:54:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/eitpshop/public_html/trangchinh/eitpshop/controller/page.php:130) in /home/eitpshop/public_html/trangchinh/eitpshop/view/admin/admin-login.php on line 6
 [23-Feb-2024 08:54:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/eitpshop/public_html/trangchinh/eitpshop/controller/page.php:131) in /home/eitpshop/public_html/trangchinh/eitpshop/view/admin/admin-login.php on line 6
+[26-Feb-2024 13:19:03 UTC] PHP Fatal error:  Class 'PDO' not found in /home/eitpshop/public_html/model/connectDB.php on line 15
+[26-Feb-2024 13:19:05 UTC] PHP Fatal error:  Class 'PDO' not found in /home/eitpshop/public_html/model/connectDB.php on line 15
+[26-Feb-2024 13:19:06 UTC] PHP Fatal error:  Class 'PDO' not found in /home/eitpshop/public_html/model/connectDB.php on line 15
+[26-Feb-2024 13:19:28 UTC] PHP Fatal error:  Class 'PDO' not found in /home/eitpshop/public_html/model/connectDB.php on line 15
+[26-Feb-2024 13:19:29 UTC] PHP Fatal error:  Class 'PDO' not found in /home/eitpshop/public_html/model/connectDB.php on line 15
+[26-Feb-2024 15:31:39 UTC] PHP Warning:  Undefined variable $SanPham_id in /home/eitpshop/public_html/controller/page.php on line 94
+[26-Feb-2024 15:31:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tong' in 'field list' in /home/eitpshop/public_html/model/cartModel.php:10
+Stack trace:
+#0 /home/eitpshop/public_html/model/cartModel.php(10): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(94): addCart(NULL, 1, 1, 'Choose Type', 'Choose Color', 7500)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/cartModel.php on line 10
+[26-Feb-2024 15:33:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tong' in 'field list' in /home/eitpshop/public_html/model/cartModel.php:10
+Stack trace:
+#0 /home/eitpshop/public_html/model/cartModel.php(10): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(94): addCart('4', 1, 1, 'Choose Type', 'Choose Color', 7500)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/cartModel.php on line 10
+[26-Feb-2024 15:36:09 UTC] PHP Warning:  Undefined variable $SanPham_id in /home/eitpshop/public_html/controller/page.php on line 94
+[26-Feb-2024 15:37:26 UTC] PHP Warning:  Undefined variable $SanPham_id in /home/eitpshop/public_html/controller/page.php on line 94
+[26-Feb-2024 15:37:57 UTC] PHP Warning:  Undefined variable $SanPham_id in /home/eitpshop/public_html/controller/page.php on line 94
+[26-Feb-2024 15:38:21 UTC] PHP Warning:  Undefined variable $SanPham_id in /home/eitpshop/public_html/controller/page.php on line 94
+[26-Feb-2024 15:54:29 UTC] PHP Warning:  Undefined variable $show_carts_by_user in /home/eitpshop/public_html/view/cart.php on line 32
+[26-Feb-2024 15:54:29 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/eitpshop/public_html/view/cart.php on line 32
+[26-Feb-2024 15:54:33 UTC] PHP Warning:  Undefined variable $show_carts_by_user in /home/eitpshop/public_html/view/cart.php on line 32
+[26-Feb-2024 15:54:33 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/eitpshop/public_html/view/cart.php on line 32
+[26-Feb-2024 15:55:43 UTC] PHP Warning:  Undefined variable $id in /home/eitpshop/public_html/controller/page.php on line 101
+[26-Feb-2024 15:55:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/cartModel.php:18
+Stack trace:
+#0 /home/eitpshop/public_html/model/cartModel.php(18): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(101): showAllCartsByNguoiDungId(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/cartModel.php on line 18
+[26-Feb-2024 15:55:43 UTC] PHP Warning:  Undefined variable $id in /home/eitpshop/public_html/controller/page.php on line 101
+[26-Feb-2024 15:55:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/cartModel.php:18
+Stack trace:
+#0 /home/eitpshop/public_html/model/cartModel.php(18): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(101): showAllCartsByNguoiDungId(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/cartModel.php on line 18
+[26-Feb-2024 15:55:44 UTC] PHP Warning:  Undefined variable $id in /home/eitpshop/public_html/controller/page.php on line 101
+[26-Feb-2024 15:55:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/cartModel.php:18
+Stack trace:
+#0 /home/eitpshop/public_html/model/cartModel.php(18): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(101): showAllCartsByNguoiDungId(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/cartModel.php on line 18
+[26-Feb-2024 15:55:44 UTC] PHP Warning:  Undefined variable $id in /home/eitpshop/public_html/controller/page.php on line 101
+[26-Feb-2024 15:55:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/cartModel.php:18
+Stack trace:
+#0 /home/eitpshop/public_html/model/cartModel.php(18): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(101): showAllCartsByNguoiDungId(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/cartModel.php on line 18
+[26-Feb-2024 16:06:31 UTC] PHP Warning:  Undefined variable $prod_id in /home/eitpshop/public_html/controller/page.php on line 102
+[26-Feb-2024 16:06:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/productModel.php:123
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(123): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(102): getProductById(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 123
+[26-Feb-2024 16:06:32 UTC] PHP Warning:  Undefined variable $prod_id in /home/eitpshop/public_html/controller/page.php on line 102
+[26-Feb-2024 16:06:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/productModel.php:123
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(123): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(102): getProductById(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 123
+[26-Feb-2024 16:08:01 UTC] PHP Warning:  Undefined variable $prod_id in /home/eitpshop/public_html/controller/page.php on line 102
+[26-Feb-2024 16:08:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/productModel.php:123
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(123): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(102): getProductById(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 123
+[26-Feb-2024 16:08:02 UTC] PHP Warning:  Undefined variable $prod_id in /home/eitpshop/public_html/controller/page.php on line 102
+[26-Feb-2024 16:08:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/productModel.php:123
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(123): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(102): getProductById(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 123
+[26-Feb-2024 16:08:16 UTC] PHP Warning:  Undefined variable $prod_id in /home/eitpshop/public_html/controller/page.php on line 102
+[26-Feb-2024 16:08:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/productModel.php:123
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(123): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(102): getProductById(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 123
+[26-Feb-2024 16:08:17 UTC] PHP Warning:  Undefined variable $prod_id in /home/eitpshop/public_html/controller/page.php on line 102
+[26-Feb-2024 16:08:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/productModel.php:123
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(123): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(102): getProductById(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 123
+[26-Feb-2024 16:08:17 UTC] PHP Warning:  Undefined variable $prod_id in /home/eitpshop/public_html/controller/page.php on line 102
+[26-Feb-2024 16:08:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/productModel.php:123
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(123): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(102): getProductById(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 123
+[26-Feb-2024 16:08:17 UTC] PHP Warning:  Undefined variable $prod_id in /home/eitpshop/public_html/controller/page.php on line 102
+[26-Feb-2024 16:08:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/productModel.php:123
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(123): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(102): getProductById(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 123
+[26-Feb-2024 16:52:12 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/eitpshop/public_html/view/cart.php on line 62
+[26-Feb-2024 16:52:12 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/eitpshop/public_html/view/cart.php:62
+Stack trace:
+#0 /home/eitpshop/public_html/controller/page.php(105): include_once()
+#1 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#2 {main}
+  thrown in /home/eitpshop/public_html/view/cart.php on line 62
+[26-Feb-2024 16:52:13 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/eitpshop/public_html/view/cart.php on line 62
+[26-Feb-2024 16:52:13 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/eitpshop/public_html/view/cart.php:62
+Stack trace:
+#0 /home/eitpshop/public_html/controller/page.php(105): include_once()
+#1 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#2 {main}
+  thrown in /home/eitpshop/public_html/view/cart.php on line 62
+[26-Feb-2024 16:52:18 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/eitpshop/public_html/view/cart.php on line 62
+[26-Feb-2024 16:52:18 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/eitpshop/public_html/view/cart.php:62
+Stack trace:
+#0 /home/eitpshop/public_html/controller/page.php(105): include_once()
+#1 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#2 {main}
+  thrown in /home/eitpshop/public_html/view/cart.php on line 62
+[26-Feb-2024 17:46:42 UTC] PHP Warning:  Undefined variable $brand_id in /home/eitpshop/public_html/controller/page.php on line 102
+[26-Feb-2024 17:46:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/cartModel.php:28
+Stack trace:
+#0 /home/eitpshop/public_html/model/cartModel.php(28): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/page.php(102): showAllCartsByBrandId(NULL)
+#2 /home/eitpshop/public_html/index.php(10): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/cartModel.php on line 28
+[26-Feb-2024 18:06:46 UTC] PHP Warning:  Undefined variable $brand in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:06:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:06:46 UTC] PHP Warning:  Undefined variable $brand in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:06:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:07:39 UTC] PHP Warning:  Undefined variable $brand in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:07:39 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:07:39 UTC] PHP Warning:  Undefined variable $brand in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:07:39 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:08:45 UTC] PHP Warning:  Undefined variable $brand in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:08:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:08:45 UTC] PHP Warning:  Undefined variable $brand in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:08:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:08:46 UTC] PHP Warning:  Undefined variable $brand in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:08:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:08:46 UTC] PHP Warning:  Undefined variable $brand in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:08:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/eitpshop/public_html/view/cart.php on line 41
+[26-Feb-2024 18:11:31 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/cart.php on line 39
+[26-Feb-2024 18:11:31 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/cart.php on line 42
+[26-Feb-2024 18:14:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:14:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:14:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:14:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:14:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:14:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:14:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:14:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:14:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:14:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:14:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:14:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:14:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:14:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:14:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:14:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:13 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:13 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:13 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:13 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:47 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:47 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:47 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:47 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:55 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:55 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:55 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:55 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:15:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:15:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:15:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:15:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:00 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:00 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:00 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:00 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:04 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:04 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:04 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:04 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:05 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:05 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:05 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:05 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:17 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:17 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:17 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:17 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:20 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:20 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:20 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:20 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:20 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:20 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:20 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:20 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:22 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:22 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:22 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:22 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:48 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:48 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:48 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:48 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:16:56 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:16:56 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:16:56 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:16:56 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:17:00 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:17:00 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:17:00 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:17:00 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:17:04 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:17:04 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:17:04 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:17:04 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:17:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:17:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:17:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:17:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:17:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:17:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:17:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:17:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:17:16 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:17:16 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:17:16 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:17:16 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:17:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Thinnest LED TV', MoTa = '(55��, 43�� , 32�� ...' at line 1 in /home/eitpshop/public_html/model/productModel.php:199
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(199): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/product.php(93): updateProduct('15', 'World's Thinnes...', '(55\xEF\xBF\xBD\xEF\xBF\xBD, 43\xEF\xBF...', 'st6.png', '550', '430', '1', '1', '', '0', '0', '0', '0', '', '0', '3')
+#2 /home/eitpshop/public_html/index.php(16): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 199
+[26-Feb-2024 18:17:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:17:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:17:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:17:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:17:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Thinnest LED TV', MoTa = '(55��, 43�� , 32�� ...' at line 1 in /home/eitpshop/public_html/model/productModel.php:199
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(199): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/product.php(93): updateProduct('15', 'World's Thinnes...', '(55\xEF\xBF\xBD\xEF\xBF\xBD, 43\xEF\xBF...', 'st6.png', '550', '430', '1', '1', '', '0', '0', '0', '0', '', '0', '3')
+#2 /home/eitpshop/public_html/index.php(16): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 199
+[26-Feb-2024 18:17:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:17:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:17:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:17:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:17:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Thinnest LED TV', MoTa = '55 inch', HinhAnh = 'st6.png', Gia = '550', LoaiG...' at line 1 in /home/eitpshop/public_html/model/productModel.php:199
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(199): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/product.php(93): updateProduct('15', 'World's Thinnes...', '55 inch', 'st6.png', '550', '430', '1', '5', '', '0', '0', '0', '0', '', '0', '3')
+#2 /home/eitpshop/public_html/index.php(16): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 199
+[26-Feb-2024 18:17:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:17:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:17:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:17:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:17:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Thinnest LED TV', MoTa = '', HinhAnh = 'st6.png', Gia = '550', LoaiGiamGia ...' at line 1 in /home/eitpshop/public_html/model/productModel.php:199
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(199): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/product.php(93): updateProduct('15', 'World's Thinnes...', '', 'st6.png', '550', '430', '0', '0', '', '0', '0', '0', '0', '', '0', '3')
+#2 /home/eitpshop/public_html/index.php(16): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 199
+[26-Feb-2024 18:17:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:17:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:17:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:17:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:18:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:18:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:18:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:18:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:18:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:18:06 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:15 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:15 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:18:15 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:18:15 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:15 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:15 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:18:15 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:18:15 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:18:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:18:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:18:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:18:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:18:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:18:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:18:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:18:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:18:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:18:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:18:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:18:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:18:58 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:18:58 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:19:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:19:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:19:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:19:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:19:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:19:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:19:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:19:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:19:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:19:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:19:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:19:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:19:16 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:19:16 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:19:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:19:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:19:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:19:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 18:19:24 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 34
+[26-Feb-2024 18:19:24 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 35
+[26-Feb-2024 18:19:24 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 53
+[26-Feb-2024 18:19:24 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/eitpshop/public_html/view/admin/updateproduct.php on line 54
+[26-Feb-2024 19:15:44 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/eitpshop/public_html/view/header.php on line 14
+[26-Feb-2024 23:08:36 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/eitpshop/public_html/view/header.php on line 14
+[26-Feb-2024 23:08:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/userModel.php:41
+Stack trace:
+#0 /home/eitpshop/public_html/model/userModel.php(41): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/user.php(80): getUserById(NULL)
+#2 /home/eitpshop/public_html/index.php(28): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/userModel.php on line 41
+[26-Feb-2024 23:08:38 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/eitpshop/public_html/view/header.php on line 14
+[26-Feb-2024 23:08:38 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/eitpshop/public_html/view/header.php on line 14
+[26-Feb-2024 23:08:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/eitpshop/public_html/model/userModel.php:41
+Stack trace:
+#0 /home/eitpshop/public_html/model/userModel.php(41): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/user.php(80): getUserById(NULL)
+#2 /home/eitpshop/public_html/index.php(28): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/userModel.php on line 41
+[26-Feb-2024 23:08:40 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/eitpshop/public_html/view/header.php on line 14
+[27-Feb-2024 01:21:43 UTC] PHP Warning:  move_uploaded_file(images/laptop.jpg): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/category.php on line 23
+[27-Feb-2024 01:21:43 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpDvmW7o' to 'images/laptop.jpg' in /home/eitpshop/public_html/controller/category.php on line 23
+[27-Feb-2024 01:21:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eitpshop`.`danhmuc`, CONSTRAINT `danhmuc_ibfk_1` FOREIGN KEY (`id`) REFERENCES `sanpham` (`MaDanhMuc`)) in /home/eitpshop/public_html/model/catelogyModel.php:35
+Stack trace:
+#0 /home/eitpshop/public_html/model/catelogyModel.php(35): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/category.php(24): createCatelogy('Computer & Lapt...', 'laptop.jpg', '', '')
+#2 /home/eitpshop/public_html/index.php(13): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/catelogyModel.php on line 35
+[27-Feb-2024 01:21:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eitpshop`.`danhmuc`, CONSTRAINT `danhmuc_ibfk_1` FOREIGN KEY (`id`) REFERENCES `sanpham` (`MaDanhMuc`)) in /home/eitpshop/public_html/model/catelogyModel.php:35
+Stack trace:
+#0 /home/eitpshop/public_html/model/catelogyModel.php(35): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/category.php(24): createCatelogy('', '', '', '')
+#2 /home/eitpshop/public_html/index.php(13): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/catelogyModel.php on line 35
+[27-Feb-2024 01:30:25 UTC] PHP Warning:  move_uploaded_file(images/Logitech Indonesia.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/brand.php on line 23
+[27-Feb-2024 01:30:25 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpMt4kSe' to 'images/Logitech Indonesia.png' in /home/eitpshop/public_html/controller/brand.php on line 23
+[27-Feb-2024 01:30:43 UTC] PHP Warning:  move_uploaded_file(images/Uniqlo.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/brand.php on line 23
+[27-Feb-2024 01:30:43 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phphBjKnE' to 'images/Uniqlo.png' in /home/eitpshop/public_html/controller/brand.php on line 23
+[27-Feb-2024 01:31:54 UTC] PHP Warning:  move_uploaded_file(images/lp1.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:31:54 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpMmGyhl' to 'images/lp1.png' in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:32:18 UTC] PHP Warning:  move_uploaded_file(images/lp2.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:32:18 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpRWkcdT' to 'images/lp2.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:32:35 UTC] PHP Warning:  move_uploaded_file(images/lp3.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:32:35 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php4gztTe' to 'images/lp3.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:32:55 UTC] PHP Warning:  move_uploaded_file(images/lp4.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:32:55 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpjHiIzH' to 'images/lp4.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:33:11 UTC] PHP Warning:  move_uploaded_file(images/lp5.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:33:11 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpPM0dLG' to 'images/lp5.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:33:39 UTC] PHP Warning:  move_uploaded_file(images/lp6.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:33:39 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpFXQKkw' to 'images/lp6.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:34:19 UTC] PHP Warning:  move_uploaded_file(images/hs4.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:34:19 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpM7XFF1' to 'images/hs4.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:34:57 UTC] PHP Warning:  move_uploaded_file(images/cam_s1.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:34:57 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpe6DPrE' to 'images/cam_s1.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:35:23 UTC] PHP Warning:  move_uploaded_file(images/cam_s2.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:35:23 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpGxPIFs' to 'images/cam_s2.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:35:43 UTC] PHP Warning:  move_uploaded_file(images/cam_s3.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:35:43 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php5Ojv2i' to 'images/cam_s3.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:36:01 UTC] PHP Warning:  move_uploaded_file(images/cam_s4.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:36:01 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php5jJoKd' to 'images/cam_s4.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:36:22 UTC] PHP Warning:  move_uploaded_file(images/hs2.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:36:22 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phphXoi9T' to 'images/hs2.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:36:38 UTC] PHP Warning:  move_uploaded_file(images/st1.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:36:38 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpWxdDRZ' to 'images/st1.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:36:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Thinnest LED TV', '', 'st1.png', 
+    '', '', '5', '8', '', '', '', '', '',...' at line 1 in /home/eitpshop/public_html/model/productModel.php:166
+Stack trace:
+#0 /home/eitpshop/public_html/model/productModel.php(166): PDOStatement->execute()
+#1 /home/eitpshop/public_html/controller/product.php(41): addProduct('World's Thinnes...', '', 'st1.png', '', '', '5', '8', '', '', '', '', '', 'Closed', '0', '65')
+#2 /home/eitpshop/public_html/index.php(16): include_once('/home/eitpshop/...')
+#3 {main}
+  thrown in /home/eitpshop/public_html/model/productModel.php on line 166
+[27-Feb-2024 01:37:11 UTC] PHP Warning:  move_uploaded_file(images/st1.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:37:11 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpExNzhN' to 'images/st1.png' in /home/eitpshop/public_html/controller/product.php on line 40
+[27-Feb-2024 01:38:44 UTC] PHP Warning:  move_uploaded_file(images/st2.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:38:44 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpO8D2OP' to 'images/st2.png' in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:38:56 UTC] PHP Warning:  move_uploaded_file(images/st3.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:38:56 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phplXFftd' to 'images/st3.png' in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:39:08 UTC] PHP Warning:  move_uploaded_file(images/st4.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:39:08 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpC17hDp' to 'images/st4.png' in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:39:19 UTC] PHP Warning:  move_uploaded_file(images/st5.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:39:19 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpPa1rpm' to 'images/st5.png' in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:39:28 UTC] PHP Warning:  move_uploaded_file(images/st6.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:39:28 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpel2sdb' to 'images/st6.png' in /home/eitpshop/public_html/controller/product.php on line 92
+[27-Feb-2024 01:41:12 UTC] PHP Warning:  move_uploaded_file(images/dog-img.jpg): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/user.php on line 66
+[27-Feb-2024 01:41:12 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpqGJwGt' to 'images/dog-img.jpg' in /home/eitpshop/public_html/controller/user.php on line 66
+[27-Feb-2024 01:43:01 UTC] PHP Warning:  move_uploaded_file(images/site-blog-01.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/blog.php on line 23
+[27-Feb-2024 01:43:01 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpyr943B' to 'images/site-blog-01.png' in /home/eitpshop/public_html/controller/blog.php on line 23
+[27-Feb-2024 01:43:30 UTC] PHP Warning:  move_uploaded_file(images/site-blog-02.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/blog.php on line 23
+[27-Feb-2024 01:43:30 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsjqHkZ' to 'images/site-blog-02.png' in /home/eitpshop/public_html/controller/blog.php on line 23
+[27-Feb-2024 01:43:51 UTC] PHP Warning:  move_uploaded_file(images/site-blog-07.png): Failed to open stream: No such file or directory in /home/eitpshop/public_html/controller/blog.php on line 23
+[27-Feb-2024 01:43:51 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpX0vRhz' to 'images/site-blog-07.png' in /home/eitpshop/public_html/controller/blog.php on line 23
+[27-Feb-2024 01:52:26 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/eitpshop/public_html/view/header.php on line 14

@@ -13,6 +13,18 @@ function getAllBlogs()
     return $data;
 }
 
+function getAllBlogsLimit($limit)
+{
+    $conn = connect();
+    $sql = "SELECT * FROM blog ORDER BY id desc LIMIT $limit";
+    // Chuẩn bị một câu lệnh để thực thi(query) và trả về một đối tượng(object) câu lệnh
+    $stmt = $conn->prepare($sql);
+    // Chuẩn bị một câu lệnh SQL để được thực thi bằng phương thức(method) execute()
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $data;
+}
+
 function getBlogById($id)
 {
     $conn = connect();
@@ -57,10 +69,10 @@ function updateBlog($id, $BlogTitle, $BlogContent, $BlogImage)
     $stmt->execute();
 }
 
-function countCatelogies()
+function countBlogs()
 {
     $conn = connect();
-    $sql = "SELECT COUNT(*) FROM danhmuc ";
+    $sql = "SELECT COUNT(*) FROM blog ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $count = $stmt->fetchColumn();
